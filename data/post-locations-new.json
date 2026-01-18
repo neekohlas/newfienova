@@ -1,0 +1,166 @@
+{
+  "description": "Maps post IDs to date ranges for filtering geotagged photos",
+  "mappings": {
+    "2443287259016875260": {
+      "title": "The Journey Begins....Now!  No wait...Now!",
+      "dateRange": [
+        "2008:07:30",
+        "2008:08:02"
+      ]
+    },
+    "4436043589922946853": {
+      "title": "The CAR",
+      "dateRange": [
+        "2008:07:30",
+        "2008:08:02"
+      ]
+    },
+    "8720269709604075403": {
+      "title": "Let the Riding Begin...God-willing",
+      "dateRange": [
+        "2008:08:02",
+        "2008:08:06"
+      ]
+    },
+    "8413902366549795657": {
+      "title": "KABOOM!!!",
+      "dateRange": [
+        "2008:08:04",
+        "2008:08:08"
+      ]
+    },
+    "841714894945557135": {
+      "title": "Ah, the Joy of Mobility",
+      "dateRange": [
+        "2008:08:05",
+        "2008:08:09"
+      ]
+    },
+    "5441908429057639276": {
+      "title": "The Choice Was Clear",
+      "dateRange": [
+        "2008:08:08",
+        "2008:08:12"
+      ]
+    },
+    "6596045885944420226": {
+      "title": "Biking in Newfoundland",
+      "dateRange": [
+        "2008:08:09",
+        "2008:08:13"
+      ]
+    },
+    "796356104313857900": {
+      "title": "Bringing Someone Home from the Bar...the Gas Bar, That Is",
+      "dateRange": [
+        "2008:08:10",
+        "2008:08:14"
+      ]
+    },
+    "8024991348506127223": {
+      "title": "7am Naps: A Battle of Wills",
+      "dateRange": [
+        "2008:08:11",
+        "2008:08:14"
+      ]
+    },
+    "3660040094162797525": {
+      "title": "We Interrupt This Blogcast...",
+      "dateRange": [
+        "2008:08:14",
+        "2008:08:14"
+      ]
+    },
+    "3993531002004072255": {
+      "title": "Corner Brook, Beyond, and Back",
+      "dateRange": [
+        "2008:08:19",
+        "2008:08:22"
+      ]
+    },
+    "4096416394657787735": {
+      "title": "Berry Heaven",
+      "dateRange": [
+        "2008:08:19",
+        "2008:08:22"
+      ]
+    },
+    "7651708599130678867": {
+      "title": "The Coveted Loop",
+      "dateRange": [
+        "2008:08:20",
+        "2008:08:24"
+      ]
+    },
+    "8146218691529274761": {
+      "title": "The Century Day",
+      "dateRange": [
+        "2008:08:21",
+        "2008:08:25"
+      ]
+    },
+    "7326320657367286282": {
+      "title": "Update on the berries",
+      "dateRange": [
+        "2008:08:24",
+        "2008:08:27"
+      ]
+    },
+    "3183872721223026856": {
+      "title": "Scenery",
+      "dateRange": [
+        "2008:08:24",
+        "2008:08:27"
+      ]
+    },
+    "1425300287377365690": {
+      "title": "Resettlement",
+      "dateRange": [
+        "2008:08:24",
+        "2008:08:27"
+      ]
+    },
+    "6743829052231552924": {
+      "title": "Heading South",
+      "dateRange": [
+        "2008:08:25",
+        "2008:08:29"
+      ]
+    },
+    "3387785513543904515": {
+      "title": "Cooking",
+      "dateRange": [
+        "2008:08:27",
+        "2008:08:29"
+      ]
+    },
+    "6025855796723337031": {
+      "title": "The Long And Lonely Road",
+      "dateRange": [
+        "2008:08:27",
+        "2008:08:31"
+      ]
+    },
+    "2483104127434354602": {
+      "title": "A Lesson in Aerodynamics",
+      "dateRange": [
+        "2008:08:29",
+        "2008:09:01"
+      ]
+    },
+    "6791033527134303750": {
+      "title": "Sou'western Coast",
+      "dateRange": [
+        "2008:08:29",
+        "2008:09:01"
+      ]
+    },
+    "8940249301427418807": {
+      "title": "Bike Maintenance",
+      "dateRange": [
+        "2008:08:29",
+        "2008:09:01"
+      ]
+    }
+  }
+}

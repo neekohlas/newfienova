@@ -1,0 +1,145 @@
+{
+  "description": "Maps post IDs to date ranges for filtering geotagged photos. Dates are in EXIF format (YYYY:MM:DD).",
+  "mappings": {
+    "2443287259016875260": {
+      "title": "The Journey Begins....Now!  No wait...Now!",
+      "dateRange": ["2008:07:30", "2008:07:31"],
+      "note": "Starting in Connecticut, July 30"
+    },
+    "4436043589922946853": {
+      "title": "The CAR",
+      "dateRange": ["2008:08:01", "2008:08:02"],
+      "note": "Arrived in Nova Scotia Aug 1, prepping bikes Aug 2"
+    },
+    "8720269709604075403": {
+      "title": "Let the Riding Begin...God-willing",
+      "dateRange": ["2008:08:02", "2008:08:03"],
+      "note": "First day of riding"
+    },
+    "8413902366549795657": {
+      "title": "KABOOM!!!",
+      "dateRange": ["2008:08:04", "2008:08:05"],
+      "note": "Flat tire incident"
+    },
+    "841714894945557135": {
+      "title": "Ah, the Joy of Mobility",
+      "dateRange": ["2008:08:05", "2008:08:06"],
+      "note": "Back on the road"
+    },
+    "5441908429057639276": {
+      "title": "The Choice Was Clear",
+      "dateRange": ["2008:08:06", "2008:08:07"],
+      "note": "Taking the ferry decision"
+    },
+    "6596045885944420226": {
+      "title": "Biking in Newfoundland",
+      "dateRange": ["2008:08:07", "2008:08:08"],
+      "note": "Arriving in Newfoundland"
+    },
+    "796356104313857900": {
+      "title": "Bringing Someone Home from the Bar...the Gas Bar, That Is",
+      "dateRange": ["2008:08:08", "2008:08:09"],
+      "note": "Hitchhiking story"
+    },
+    "8024991348506127223": {
+      "title": "7am Naps: A Battle of Wills",
+      "dateRange": ["2008:08:09", "2008:08:10"],
+      "note": "Camping and schedules"
+    },
+    "3660040094162797525": {
+      "title": "We Interrupt This Blogcast...",
+      "dateRange": ["2008:08:14", "2008:08:14"],
+      "note": "Mid-trip update"
+    },
+    "3993531002004072255": {
+      "title": "Corner Brook, Beyond, and Back",
+      "dateRange": ["2008:08:10", "2008:08:12"],
+      "note": "Corner Brook area exploration"
+    },
+    "4096416394657787735": {
+      "title": "Berry Heaven",
+      "dateRange": ["2008:08:12", "2008:08:13"],
+      "note": "Berry picking"
+    },
+    "7651708599130678867": {
+      "title": "The Coveted Loop",
+      "dateRange": ["2008:08:13", "2008:08:14"],
+      "note": "Northern loop route"
+    },
+    "8146218691529274761": {
+      "title": "The Century Day",
+      "dateRange": ["2008:08:14", "2008:08:14"],
+      "note": "100 mile day"
+    },
+    "7326320657367286282": {
+      "title": "Update on the berries",
+      "dateRange": ["2008:08:19", "2008:08:19"],
+      "note": "Berry update"
+    },
+    "3183872721223026856": {
+      "title": "Scenery",
+      "dateRange": ["2008:08:19", "2008:08:20"],
+      "note": "Scenic photos"
+    },
+    "1425300287377365690": {
+      "title": "Resettlement",
+      "dateRange": ["2008:08:20", "2008:08:21"],
+      "note": "Outport resettlement discussion"
+    },
+    "6743829052231552924": {
+      "title": "Heading South",
+      "dateRange": ["2008:08:21", "2008:08:22"],
+      "note": "Turning south"
+    },
+    "3387785513543904515": {
+      "title": "Cooking",
+      "dateRange": ["2008:08:22", "2008:08:24"],
+      "note": "Camp cooking"
+    },
+    "6025855796723337031": {
+      "title": "The Long And Lonely Road",
+      "dateRange": ["2008:08:24", "2008:08:25"],
+      "note": "Burgeo Road"
+    },
+    "2483104127434354602": {
+      "title": "A Lesson in Aerodynamics",
+      "dateRange": ["2008:08:25", "2008:08:27"],
+      "note": "Wind and weather"
+    },
+    "6791033527134303750": {
+      "title": "Sou'western Coast",
+      "dateRange": ["2008:08:27", "2008:08:29"],
+      "note": "Southwest coast of Newfoundland"
+    },
+    "8940249301427418807": {
+      "title": "Bike Maintenance",
+      "dateRange": ["2008:08:29", "2008:08:31"],
+      "note": "Bike repairs"
+    },
+    "7072306562672841573": {
+      "title": "Video Blog",
+      "dateRange": null,
+      "note": "No geotagged photos available for this date (Sep 5)"
+    },
+    "2198099018247338672": {
+      "title": "Grand Bruit",
+      "dateRange": null,
+      "note": "No geotagged photos available for this date (Sep 5)"
+    },
+    "3612739713248948561": {
+      "title": "The Last of the Ferries",
+      "dateRange": null,
+      "note": "No geotagged photos available for this date (Sep 7)"
+    },
+    "8104658444878393316": {
+      "title": "The Home Stretch",
+      "dateRange": null,
+      "note": "No geotagged photos available for this date (Sep 9)"
+    },
+    "3743438617783611214": {
+      "title": "Home James!",
+      "dateRange": ["2008:08:31", "2008:09:01"],
+      "note": "Final entry - using last available photos"
+    }
+  }
+}

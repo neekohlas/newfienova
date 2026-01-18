@@ -1,0 +1,1592 @@
+{
+  "description": "Maps blog post images to geotagged photos",
+  "threshold": 0.7,
+  "totalMatches": 108,
+  "matches": {
+    "/media/2094750058624522350_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (130 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(130%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(130%20of%20161).jpeg",
+      "latitude": 48.93611111111111,
+      "longitude": -57.94277777777778,
+      "date": "2008:08:22 09:46:55"
+    },
+    "/media/2094750058624522350_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (132 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(132%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(132%20of%20161).jpeg",
+      "latitude": 48.38508611111111,
+      "longitude": -57.69883055555555,
+      "date": "2008:08:22 19:39:06"
+    },
+    "/media/2094750058624522350_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (128 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "similarity": 88,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 14:02:35"
+    },
+    "/media/2198099018247338672_image_1.JPG": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (128 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "similarity": 86,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 14:02:35"
+    },
+    "/media/2443287259016875260_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (3 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(3%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(3%20of%20161).jpeg",
+      "latitude": 41.38861111111111,
+      "longitude": -73.45333333333333,
+      "date": "2008:07:30 21:13:28"
+    },
+    "/media/2860922887111060604_image_0.JPG": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (64 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(64%20of%20161).jpeg",
+      "similarity": 98,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(64%20of%20161).jpeg",
+      "latitude": 48.960236111111115,
+      "longitude": -57.99606111111111,
+      "date": "2008:08:11 12:07:00"
+    },
+    "/media/2860922887111060604_image_1.JPG": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (86 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(86%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(86%20of%20161).jpeg",
+      "latitude": 49.51806944444444,
+      "longitude": -57.875058333333335,
+      "date": "2008:08:14 11:46:51"
+    },
+    "/media/3183872721223026856_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (93 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(93%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(93%20of%20161).jpeg",
+      "latitude": 49.84970555555556,
+      "longitude": -57.82951388888889,
+      "date": "2008:08:14 20:51:44"
+    },
+    "/media/3183872721223026856_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (128 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "similarity": 86,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 14:02:35"
+    },
+    "/media/3183872721223026856_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (48 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(48%20of%20161).jpeg",
+      "similarity": 87,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(48%20of%20161).jpeg",
+      "latitude": 47.93759166666666,
+      "longitude": -58.982172222222225,
+      "date": "2008:08:08 20:34:14"
+    },
+    "/media/3183872721223026856_image_9.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (127 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(127%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(127%20of%20161).jpeg",
+      "latitude": 49.65181388888889,
+      "longitude": -57.755833333333335,
+      "date": "2008:08:20 13:22:54"
+    },
+    "/media/3387785513543904515_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (60 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(60%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(60%20of%20161).jpeg",
+      "latitude": 48.95055555555556,
+      "longitude": -57.95086944444445,
+      "date": "2008:08:10 17:32:56"
+    },
+    "/media/3387785513543904515_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (118 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(118%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(118%20of%20161).jpeg",
+      "latitude": 49.58315,
+      "longitude": -57.90096666666666,
+      "date": "2008:08:19 18:32:43"
+    },
+    "/media/3387785513543904515_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (120 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg",
+      "latitude": 49.58315,
+      "longitude": -57.90096666666666,
+      "date": "2008:08:19 19:19:05"
+    },
+    "/media/3387785513543904515_image_4.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (138 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(138%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(138%20of%20161).jpeg",
+      "latitude": 47.61018333333333,
+      "longitude": -57.60943888888889,
+      "date": "2008:08:24 13:22:47"
+    },
+    "/media/3387785513543904515_image_5.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (129 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(129%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(129%20of%20161).jpeg",
+      "latitude": 48.93611111111111,
+      "longitude": -57.94277777777778,
+      "date": "2008:08:21 21:26:19"
+    },
+    "/media/3612739713248948561_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (152 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(152%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(152%20of%20161).jpeg",
+      "latitude": 47.578497222222225,
+      "longitude": -59.14022222222222,
+      "date": "2008:08:27 23:23:18"
+    },
+    "/media/3743438617783611214_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (128 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "similarity": 85,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 14:02:35"
+    },
+    "/media/3743438617783611214_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (158 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(158%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(158%20of%20161).jpeg",
+      "latitude": 45.81944444444445,
+      "longitude": -61.30277777777778,
+      "date": "2008:08:31 19:36:53"
+    },
+    "/media/3743438617783611214_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (159 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(159%20of%20161).jpeg",
+      "similarity": 98,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(159%20of%20161).jpeg",
+      "latitude": 45.81944444444445,
+      "longitude": -61.30277777777778,
+      "date": "2008:09:01 10:44:48"
+    },
+    "/media/3993531002004072255_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (61 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(61%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(61%20of%20161).jpeg",
+      "latitude": 48.960236111111115,
+      "longitude": -57.99606111111111,
+      "date": "2008:08:10 21:26:05"
+    },
+    "/media/3993531002004072255_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (62 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(62%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(62%20of%20161).jpeg",
+      "latitude": 48.960236111111115,
+      "longitude": -57.99606111111111,
+      "date": "2008:08:11 10:58:35"
+    },
+    "/media/3993531002004072255_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (63 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(63%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(63%20of%20161).jpeg",
+      "latitude": 48.960236111111115,
+      "longitude": -57.99606111111111,
+      "date": "2008:08:11 11:14:56"
+    },
+    "/media/3993531002004072255_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (67 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(67%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(67%20of%20161).jpeg",
+      "latitude": 48.94368055555555,
+      "longitude": -57.93373611111111,
+      "date": "2008:08:11 20:21:35"
+    },
+    "/media/3993531002004072255_image_4.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (68 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(68%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(68%20of%20161).jpeg",
+      "latitude": 48.93619722222222,
+      "longitude": -57.94283055555555,
+      "date": "2008:08:12 08:58:10"
+    },
+    "/media/4096416394657787735_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (69 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(69%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(69%20of%20161).jpeg",
+      "latitude": 49.15408611111111,
+      "longitude": -57.447894444444444,
+      "date": "2008:08:12 16:25:49"
+    },
+    "/media/4096416394657787735_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (71 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(71%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(71%20of%20161).jpeg",
+      "latitude": 49.27475277777778,
+      "longitude": -57.50543888888889,
+      "date": "2008:08:13 09:01:04"
+    },
+    "/media/4096416394657787735_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (74 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(74%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(74%20of%20161).jpeg",
+      "latitude": 49.49681944444445,
+      "longitude": -57.92048333333333,
+      "date": "2008:08:13 18:58:31"
+    },
+    "/media/4096416394657787735_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (73 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(73%20of%20161).jpeg",
+      "similarity": 97,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(73%20of%20161).jpeg",
+      "latitude": 49.49681944444445,
+      "longitude": -57.92048333333333,
+      "date": "2008:08:13 18:55:15"
+    },
+    "/media/4436043589922946853_image_0.JPG": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (2 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(2%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(2%20of%20161).jpeg",
+      "latitude": 41.38861111111111,
+      "longitude": -73.45333333333333,
+      "date": "2008:07:30 18:52:33"
+    },
+    "/media/4436043589922946853_image_3.JPG": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (9 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(9%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(9%20of%20161).jpeg",
+      "latitude": 45.81937777777778,
+      "longitude": -61.30281944444444,
+      "date": "2008:08:01 10:24:33"
+    },
+    "/media/4436043589922946853_image_4.JPG": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (10 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(10%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(10%20of%20161).jpeg",
+      "latitude": 45.81937777777778,
+      "longitude": -61.30281944444444,
+      "date": "2008:08:01 14:29:04"
+    },
+    "/media/5441908429057639276_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (38 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(38%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(38%20of%20161).jpeg",
+      "latitude": 46.27328611111111,
+      "longitude": -60.168502777777775,
+      "date": "2008:08:07 12:33:45"
+    },
+    "/media/5441908429057639276_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (40 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(40%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(40%20of%20161).jpeg",
+      "latitude": 46.27328611111111,
+      "longitude": -60.168502777777775,
+      "date": "2008:08:07 13:21:45"
+    },
+    "/media/5441908429057639276_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (42 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(42%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(42%20of%20161).jpeg",
+      "latitude": 46.27328611111111,
+      "longitude": -60.168502777777775,
+      "date": "2008:08:07 14:49:26"
+    },
+    "/media/5441908429057639276_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (43 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(43%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(43%20of%20161).jpeg",
+      "latitude": 46.27328611111111,
+      "longitude": -60.168502777777775,
+      "date": "2008:08:07 17:33:18"
+    },
+    "/media/6025855796723337031_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (130 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(130%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(130%20of%20161).jpeg",
+      "latitude": 48.93611111111111,
+      "longitude": -57.94277777777778,
+      "date": "2008:08:22 09:46:55"
+    },
+    "/media/6025855796723337031_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (132 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(132%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(132%20of%20161).jpeg",
+      "latitude": 48.38508611111111,
+      "longitude": -57.69883055555555,
+      "date": "2008:08:22 19:39:06"
+    },
+    "/media/6025855796723337031_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (128 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "similarity": 88,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 14:02:35"
+    },
+    "/media/6596045885944420226_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (45 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(45%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(45%20of%20161).jpeg",
+      "latitude": 47.58261111111111,
+      "longitude": -59.14024444444444,
+      "date": "2008:08:08 08:39:38"
+    },
+    "/media/6596045885944420226_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (50 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(50%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(50%20of%20161).jpeg",
+      "latitude": 48.26054166666667,
+      "longitude": -58.67847777777777,
+      "date": "2008:08:09 10:28:41"
+    },
+    "/media/6596045885944420226_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (48 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(48%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(48%20of%20161).jpeg",
+      "latitude": 47.93759166666666,
+      "longitude": -58.982172222222225,
+      "date": "2008:08:08 20:34:14"
+    },
+    "/media/6596045885944420226_image_4.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (49 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(49%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(49%20of%20161).jpeg",
+      "latitude": 47.93759166666666,
+      "longitude": -58.982172222222225,
+      "date": "2008:08:08 20:34:28"
+    },
+    "/media/6743829052231552924_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (122 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(122%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(122%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 11:58:23"
+    },
+    "/media/6743829052231552924_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (123 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(123%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(123%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 12:11:22"
+    },
+    "/media/6743829052231552924_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (126 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(126%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(126%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 13:18:41"
+    },
+    "/media/6791033527134303750_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (137 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(137%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(137%20of%20161).jpeg",
+      "latitude": 47.61018333333333,
+      "longitude": -57.60943888888889,
+      "date": "2008:08:24 11:41:13"
+    },
+    "/media/6791033527134303750_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (146 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(146%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(146%20of%20161).jpeg",
+      "latitude": 47.52388888888889,
+      "longitude": -57.38771944444444,
+      "date": "2008:08:24 20:04:04"
+    },
+    "/media/6791033527134303750_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (145 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(145%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(145%20of%20161).jpeg",
+      "latitude": 47.52388888888889,
+      "longitude": -57.38771944444444,
+      "date": "2008:08:24 19:56:53"
+    },
+    "/media/6791033527134303750_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (143 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(143%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(143%20of%20161).jpeg",
+      "latitude": 47.52388888888889,
+      "longitude": -57.38771944444444,
+      "date": "2008:08:24 19:01:54"
+    },
+    "/media/730817883446377088_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (130 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(130%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(130%20of%20161).jpeg",
+      "latitude": 48.93611111111111,
+      "longitude": -57.94277777777778,
+      "date": "2008:08:22 09:46:55"
+    },
+    "/media/730817883446377088_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (132 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(132%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(132%20of%20161).jpeg",
+      "latitude": 48.38508611111111,
+      "longitude": -57.69883055555555,
+      "date": "2008:08:22 19:39:06"
+    },
+    "/media/730817883446377088_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (128 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "similarity": 88,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 14:02:35"
+    },
+    "/media/7651708599130678867_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (72 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(72%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(72%20of%20161).jpeg",
+      "latitude": 49.47956111111111,
+      "longitude": -57.92497777777778,
+      "date": "2008:08:13 17:46:21"
+    },
+    "/media/7651708599130678867_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (75 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(75%20of%20161).jpeg",
+      "similarity": 95,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(75%20of%20161).jpeg",
+      "latitude": 49.50460833333333,
+      "longitude": -57.912705555555554,
+      "date": "2008:08:13 19:56:54"
+    },
+    "/media/7651708599130678867_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (78 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(78%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(78%20of%20161).jpeg",
+      "latitude": 49.50460833333333,
+      "longitude": -57.912705555555554,
+      "date": "2008:08:13 20:35:12"
+    },
+    "/media/7651708599130678867_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (82 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(82%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(82%20of%20161).jpeg",
+      "latitude": 49.510130555555556,
+      "longitude": -57.90562222222222,
+      "date": "2008:08:14 09:31:53"
+    },
+    "/media/7651708599130678867_image_4.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (135 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(135%20of%20161).jpeg",
+      "similarity": 98
+    },
+    "/media/796356104313857900_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (51 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(51%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(51%20of%20161).jpeg",
+      "latitude": 48.26054166666667,
+      "longitude": -58.67847777777777,
+      "date": "2008:08:10 06:47:28"
+    },
+    "/media/796356104313857900_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (52 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(52%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(52%20of%20161).jpeg",
+      "latitude": 48.26054166666667,
+      "longitude": -58.67847777777777,
+      "date": "2008:08:10 06:54:25"
+    },
+    "/media/8024991348506127223_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (53 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(53%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(53%20of%20161).jpeg",
+      "latitude": 48.3037,
+      "longitude": -58.62274722222222,
+      "date": "2008:08:10 08:55:17"
+    },
+    "/media/8024991348506127223_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (54 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(54%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(54%20of%20161).jpeg",
+      "latitude": 48.3037,
+      "longitude": -58.62274722222222,
+      "date": "2008:08:10 08:56:32"
+    },
+    "/media/8024991348506127223_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (56 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(56%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(56%20of%20161).jpeg",
+      "latitude": 48.3037,
+      "longitude": -58.62274722222222,
+      "date": "2008:08:10 09:47:20"
+    },
+    "/media/8104658444878393316_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (154 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(154%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(154%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:27:13"
+    },
+    "/media/8104658444878393316_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (153 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(153%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(153%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:26:48"
+    },
+    "/media/8104658444878393316_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (155 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(155%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(155%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:52:38"
+    },
+    "/media/8104658444878393316_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (156 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(156%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(156%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:52:48"
+    },
+    "/media/8104658444878393316_image_4.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (157 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(157%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(157%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:52:56"
+    },
+    "/media/8413902366549795657_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (17 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(17%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(17%20of%20161).jpeg",
+      "latitude": 45.95976111111111,
+      "longitude": -60.773852777777776,
+      "date": "2008:08:03 12:30:47"
+    },
+    "/media/8413902366549795657_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (21 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(21%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(21%20of%20161).jpeg",
+      "latitude": 45.992133333333335,
+      "longitude": -60.70859444444445,
+      "date": "2008:08:03 13:38:27"
+    },
+    "/media/8413902366549795657_image_4.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (1 of 3).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(1%20of%203).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(1%20of%203).jpeg",
+      "latitude": 45.992133333333335,
+      "longitude": -60.70859444444445,
+      "date": "2008:08:04 13:37:41"
+    },
+    "/media/8413902366549795657_image_5.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (19 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(19%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(19%20of%20161).jpeg",
+      "latitude": 45.992133333333335,
+      "longitude": -60.70859444444445,
+      "date": "2008:08:03 13:38:07"
+    },
+    "/media/8413902366549795657_image_6.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (20 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(20%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(20%20of%20161).jpeg",
+      "latitude": 45.992133333333335,
+      "longitude": -60.70859444444445,
+      "date": "2008:08:03 13:38:18"
+    },
+    "/media/8413902366549795657_image_9.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (29 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(29%20of%20161).jpeg",
+      "similarity": 97,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(29%20of%20161).jpeg",
+      "latitude": 46.012544444444444,
+      "longitude": -60.67323611111111,
+      "date": "2008:08:05 09:33:47"
+    },
+    "/media/841714894945557135_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (32 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(32%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(32%20of%20161).jpeg",
+      "latitude": 46.12312222222222,
+      "longitude": -60.19779722222222,
+      "date": "2008:08:06 11:44:27"
+    },
+    "/media/841714894945557135_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (33 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(33%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(33%20of%20161).jpeg",
+      "latitude": 46.14226388888889,
+      "longitude": -60.19979166666666,
+      "date": "2008:08:06 14:14:05"
+    },
+    "/media/841714894945557135_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (35 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(35%20of%20161).jpeg",
+      "similarity": 97,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(35%20of%20161).jpeg",
+      "latitude": 46.15177222222222,
+      "longitude": -60.30019722222222,
+      "date": "2008:08:06 16:59:57"
+    },
+    "/media/8720269709604075403_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (11 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(11%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(11%20of%20161).jpeg",
+      "latitude": 45.81937777777778,
+      "longitude": -61.30281944444444,
+      "date": "2008:08:02 07:09:41"
+    },
+    "/media/8720269709604075403_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (45 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(45%20of%20161).jpeg",
+      "similarity": 89,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(45%20of%20161).jpeg",
+      "latitude": 47.58261111111111,
+      "longitude": -59.14024444444444,
+      "date": "2008:08:08 08:39:38"
+    },
+    "/media/8940249301427418807_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (147 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(147%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(147%20of%20161).jpeg",
+      "latitude": 47.52388888888889,
+      "longitude": -57.38771944444444,
+      "date": "2008:08:25 21:31:43"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(130%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (130 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(130%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(130%20of%20161).jpeg",
+      "latitude": 48.93611111111111,
+      "longitude": -57.94277777777778,
+      "date": "2008:08:22 09:46:55"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(132%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (132 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(132%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(132%20of%20161).jpeg",
+      "latitude": 48.38508611111111,
+      "longitude": -57.69883055555555,
+      "date": "2008:08:22 19:39:06"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (128 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "similarity": 88,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 14:02:35"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(3%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (3 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(3%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(3%20of%20161).jpeg",
+      "latitude": 41.38861111111111,
+      "longitude": -73.45333333333333,
+      "date": "2008:07:30 21:13:28"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(64%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (64 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(64%20of%20161).jpeg",
+      "similarity": 98,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(64%20of%20161).jpeg",
+      "latitude": 48.960236111111115,
+      "longitude": -57.99606111111111,
+      "date": "2008:08:11 12:07:00"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(86%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (86 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(86%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(86%20of%20161).jpeg",
+      "latitude": 49.51806944444444,
+      "longitude": -57.875058333333335,
+      "date": "2008:08:14 11:46:51"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(93%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (93 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(93%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(93%20of%20161).jpeg",
+      "latitude": 49.84970555555556,
+      "longitude": -57.82951388888889,
+      "date": "2008:08:14 20:51:44"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(48%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (48 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(48%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(48%20of%20161).jpeg",
+      "latitude": 47.93759166666666,
+      "longitude": -58.982172222222225,
+      "date": "2008:08:08 20:34:14"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(127%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (127 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(127%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(127%20of%20161).jpeg",
+      "latitude": 49.65181388888889,
+      "longitude": -57.755833333333335,
+      "date": "2008:08:20 13:22:54"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(60%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (60 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(60%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(60%20of%20161).jpeg",
+      "latitude": 48.95055555555556,
+      "longitude": -57.95086944444445,
+      "date": "2008:08:10 17:32:56"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(118%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (118 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(118%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(118%20of%20161).jpeg",
+      "latitude": 49.58315,
+      "longitude": -57.90096666666666,
+      "date": "2008:08:19 18:32:43"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (120 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg",
+      "latitude": 49.58315,
+      "longitude": -57.90096666666666,
+      "date": "2008:08:19 19:19:05"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(138%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (138 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(138%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(138%20of%20161).jpeg",
+      "latitude": 47.61018333333333,
+      "longitude": -57.60943888888889,
+      "date": "2008:08:24 13:22:47"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(129%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (129 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(129%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(129%20of%20161).jpeg",
+      "latitude": 48.93611111111111,
+      "longitude": -57.94277777777778,
+      "date": "2008:08:21 21:26:19"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(152%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (152 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(152%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(152%20of%20161).jpeg",
+      "latitude": 47.578497222222225,
+      "longitude": -59.14022222222222,
+      "date": "2008:08:27 23:23:18"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(158%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (158 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(158%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(158%20of%20161).jpeg",
+      "latitude": 45.81944444444445,
+      "longitude": -61.30277777777778,
+      "date": "2008:08:31 19:36:53"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(159%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (159 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(159%20of%20161).jpeg",
+      "similarity": 98,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(159%20of%20161).jpeg",
+      "latitude": 45.81944444444445,
+      "longitude": -61.30277777777778,
+      "date": "2008:09:01 10:44:48"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(61%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (61 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(61%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(61%20of%20161).jpeg",
+      "latitude": 48.960236111111115,
+      "longitude": -57.99606111111111,
+      "date": "2008:08:10 21:26:05"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(62%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (62 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(62%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(62%20of%20161).jpeg",
+      "latitude": 48.960236111111115,
+      "longitude": -57.99606111111111,
+      "date": "2008:08:11 10:58:35"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(63%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (63 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(63%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(63%20of%20161).jpeg",
+      "latitude": 48.960236111111115,
+      "longitude": -57.99606111111111,
+      "date": "2008:08:11 11:14:56"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(67%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (67 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(67%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(67%20of%20161).jpeg",
+      "latitude": 48.94368055555555,
+      "longitude": -57.93373611111111,
+      "date": "2008:08:11 20:21:35"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(68%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (68 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(68%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(68%20of%20161).jpeg",
+      "latitude": 48.93619722222222,
+      "longitude": -57.94283055555555,
+      "date": "2008:08:12 08:58:10"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(69%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (69 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(69%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(69%20of%20161).jpeg",
+      "latitude": 49.15408611111111,
+      "longitude": -57.447894444444444,
+      "date": "2008:08:12 16:25:49"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(71%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (71 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(71%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(71%20of%20161).jpeg",
+      "latitude": 49.27475277777778,
+      "longitude": -57.50543888888889,
+      "date": "2008:08:13 09:01:04"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(74%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (74 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(74%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(74%20of%20161).jpeg",
+      "latitude": 49.49681944444445,
+      "longitude": -57.92048333333333,
+      "date": "2008:08:13 18:58:31"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(73%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (73 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(73%20of%20161).jpeg",
+      "similarity": 97,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(73%20of%20161).jpeg",
+      "latitude": 49.49681944444445,
+      "longitude": -57.92048333333333,
+      "date": "2008:08:13 18:55:15"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(2%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (2 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(2%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(2%20of%20161).jpeg",
+      "latitude": 41.38861111111111,
+      "longitude": -73.45333333333333,
+      "date": "2008:07:30 18:52:33"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(9%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (9 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(9%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(9%20of%20161).jpeg",
+      "latitude": 45.81937777777778,
+      "longitude": -61.30281944444444,
+      "date": "2008:08:01 10:24:33"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(10%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (10 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(10%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(10%20of%20161).jpeg",
+      "latitude": 45.81937777777778,
+      "longitude": -61.30281944444444,
+      "date": "2008:08:01 14:29:04"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(38%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (38 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(38%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(38%20of%20161).jpeg",
+      "latitude": 46.27328611111111,
+      "longitude": -60.168502777777775,
+      "date": "2008:08:07 12:33:45"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(40%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (40 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(40%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(40%20of%20161).jpeg",
+      "latitude": 46.27328611111111,
+      "longitude": -60.168502777777775,
+      "date": "2008:08:07 13:21:45"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(42%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (42 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(42%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(42%20of%20161).jpeg",
+      "latitude": 46.27328611111111,
+      "longitude": -60.168502777777775,
+      "date": "2008:08:07 14:49:26"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(43%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (43 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(43%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(43%20of%20161).jpeg",
+      "latitude": 46.27328611111111,
+      "longitude": -60.168502777777775,
+      "date": "2008:08:07 17:33:18"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(45%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (45 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(45%20of%20161).jpeg",
+      "similarity": 89,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(45%20of%20161).jpeg",
+      "latitude": 47.58261111111111,
+      "longitude": -59.14024444444444,
+      "date": "2008:08:08 08:39:38"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(50%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (50 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(50%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(50%20of%20161).jpeg",
+      "latitude": 48.26054166666667,
+      "longitude": -58.67847777777777,
+      "date": "2008:08:09 10:28:41"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(49%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (49 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(49%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(49%20of%20161).jpeg",
+      "latitude": 47.93759166666666,
+      "longitude": -58.982172222222225,
+      "date": "2008:08:08 20:34:28"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(122%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (122 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(122%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(122%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 11:58:23"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(123%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (123 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(123%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(123%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 12:11:22"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(126%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (126 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(126%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(126%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 13:18:41"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(137%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (137 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(137%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(137%20of%20161).jpeg",
+      "latitude": 47.61018333333333,
+      "longitude": -57.60943888888889,
+      "date": "2008:08:24 11:41:13"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(146%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (146 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(146%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(146%20of%20161).jpeg",
+      "latitude": 47.52388888888889,
+      "longitude": -57.38771944444444,
+      "date": "2008:08:24 20:04:04"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(145%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (145 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(145%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(145%20of%20161).jpeg",
+      "latitude": 47.52388888888889,
+      "longitude": -57.38771944444444,
+      "date": "2008:08:24 19:56:53"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(143%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (143 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(143%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(143%20of%20161).jpeg",
+      "latitude": 47.52388888888889,
+      "longitude": -57.38771944444444,
+      "date": "2008:08:24 19:01:54"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(72%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (72 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(72%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(72%20of%20161).jpeg",
+      "latitude": 49.47956111111111,
+      "longitude": -57.92497777777778,
+      "date": "2008:08:13 17:46:21"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(75%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (75 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(75%20of%20161).jpeg",
+      "similarity": 95,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(75%20of%20161).jpeg",
+      "latitude": 49.50460833333333,
+      "longitude": -57.912705555555554,
+      "date": "2008:08:13 19:56:54"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(78%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (78 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(78%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(78%20of%20161).jpeg",
+      "latitude": 49.50460833333333,
+      "longitude": -57.912705555555554,
+      "date": "2008:08:13 20:35:12"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(82%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (82 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(82%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(82%20of%20161).jpeg",
+      "latitude": 49.510130555555556,
+      "longitude": -57.90562222222222,
+      "date": "2008:08:14 09:31:53"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(135%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (135 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(135%20of%20161).jpeg",
+      "similarity": 98
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(51%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (51 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(51%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(51%20of%20161).jpeg",
+      "latitude": 48.26054166666667,
+      "longitude": -58.67847777777777,
+      "date": "2008:08:10 06:47:28"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(52%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (52 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(52%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(52%20of%20161).jpeg",
+      "latitude": 48.26054166666667,
+      "longitude": -58.67847777777777,
+      "date": "2008:08:10 06:54:25"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(53%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (53 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(53%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(53%20of%20161).jpeg",
+      "latitude": 48.3037,
+      "longitude": -58.62274722222222,
+      "date": "2008:08:10 08:55:17"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(54%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (54 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(54%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(54%20of%20161).jpeg",
+      "latitude": 48.3037,
+      "longitude": -58.62274722222222,
+      "date": "2008:08:10 08:56:32"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(56%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (56 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(56%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(56%20of%20161).jpeg",
+      "latitude": 48.3037,
+      "longitude": -58.62274722222222,
+      "date": "2008:08:10 09:47:20"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(154%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (154 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(154%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(154%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:27:13"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(153%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (153 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(153%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(153%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:26:48"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(155%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (155 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(155%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(155%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:52:38"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(156%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (156 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(156%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(156%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:52:48"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(157%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (157 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(157%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(157%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:52:56"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(17%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (17 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(17%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(17%20of%20161).jpeg",
+      "latitude": 45.95976111111111,
+      "longitude": -60.773852777777776,
+      "date": "2008:08:03 12:30:47"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(21%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (21 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(21%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(21%20of%20161).jpeg",
+      "latitude": 45.992133333333335,
+      "longitude": -60.70859444444445,
+      "date": "2008:08:03 13:38:27"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(1%20of%203).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (1 of 3).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(1%20of%203).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(1%20of%203).jpeg",
+      "latitude": 45.992133333333335,
+      "longitude": -60.70859444444445,
+      "date": "2008:08:04 13:37:41"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(19%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (19 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(19%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(19%20of%20161).jpeg",
+      "latitude": 45.992133333333335,
+      "longitude": -60.70859444444445,
+      "date": "2008:08:03 13:38:07"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(20%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (20 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(20%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(20%20of%20161).jpeg",
+      "latitude": 45.992133333333335,
+      "longitude": -60.70859444444445,
+      "date": "2008:08:03 13:38:18"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(29%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (29 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(29%20of%20161).jpeg",
+      "similarity": 97,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(29%20of%20161).jpeg",
+      "latitude": 46.012544444444444,
+      "longitude": -60.67323611111111,
+      "date": "2008:08:05 09:33:47"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(32%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (32 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(32%20of%20161).jpeg",
+      "similarity": 100,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(32%20of%20161).jpeg",
+      "latitude": 46.12312222222222,
+      "longitude": -60.19779722222222,
+      "date": "2008:08:06 11:44:27"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(33%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (33 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(33%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(33%20of%20161).jpeg",
+      "latitude": 46.14226388888889,
+      "longitude": -60.19979166666666,
+      "date": "2008:08:06 14:14:05"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(35%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (35 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(35%20of%20161).jpeg",
+      "similarity": 97,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(35%20of%20161).jpeg",
+      "latitude": 46.15177222222222,
+      "longitude": -60.30019722222222,
+      "date": "2008:08:06 16:59:57"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(11%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (11 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(11%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(11%20of%20161).jpeg",
+      "latitude": 45.81937777777778,
+      "longitude": -61.30281944444444,
+      "date": "2008:08:02 07:09:41"
+    },
+    "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(147%20of%20161).jpeg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (147 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(147%20of%20161).jpeg",
+      "similarity": 99,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(147%20of%20161).jpeg",
+      "latitude": 47.52388888888889,
+      "longitude": -57.38771944444444,
+      "date": "2008:08:25 21:31:43"
+    },
+    "/media/2198099018247338672_image_0.JPG": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (128 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "similarity": 84,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 14:02:35"
+    },
+    "/media/2443287259016875260_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (157 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(157%20of%20161).jpeg",
+      "similarity": 82,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(157%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:52:56"
+    },
+    "/media/3183872721223026856_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (128 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "similarity": 83,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 14:02:35"
+    },
+    "/media/3183872721223026856_image_10.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (157 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(157%20of%20161).jpeg",
+      "similarity": 85,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(157%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:52:56"
+    },
+    "/media/3183872721223026856_image_4.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (154 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(154%20of%20161).jpeg",
+      "similarity": 84,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(154%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:27:13"
+    },
+    "/media/3183872721223026856_image_5.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (122 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(122%20of%20161).jpeg",
+      "similarity": 76,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(122%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 11:58:23"
+    },
+    "/media/3183872721223026856_image_6.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (63 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(63%20of%20161).jpeg",
+      "similarity": 84,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(63%20of%20161).jpeg",
+      "latitude": 48.960236111111115,
+      "longitude": -57.99606111111111,
+      "date": "2008:08:11 11:14:56"
+    },
+    "/media/3183872721223026856_image_7.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (120 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg",
+      "similarity": 81,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg",
+      "latitude": 49.58315,
+      "longitude": -57.90096666666666,
+      "date": "2008:08:19 19:19:05"
+    },
+    "/media/3183872721223026856_image_8.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (120 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg",
+      "similarity": 82,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg",
+      "latitude": 49.58315,
+      "longitude": -57.90096666666666,
+      "date": "2008:08:19 19:19:05"
+    },
+    "/media/3387785513543904515_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (120 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg",
+      "similarity": 81,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg",
+      "latitude": 49.58315,
+      "longitude": -57.90096666666666,
+      "date": "2008:08:19 19:19:05"
+    },
+    "/media/3488733348936862330_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (21 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(21%20of%20161).jpeg",
+      "similarity": 78,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(21%20of%20161).jpeg",
+      "latitude": 45.992133333333335,
+      "longitude": -60.70859444444445,
+      "date": "2008:08:03 13:38:27"
+    },
+    "/media/4436043589922946853_image_1.JPG": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (120 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg",
+      "similarity": 79,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(120%20of%20161).jpeg",
+      "latitude": 49.58315,
+      "longitude": -57.90096666666666,
+      "date": "2008:08:19 19:19:05"
+    },
+    "/media/4436043589922946853_image_2.JPG": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (63 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(63%20of%20161).jpeg",
+      "similarity": 76,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(63%20of%20161).jpeg",
+      "latitude": 48.960236111111115,
+      "longitude": -57.99606111111111,
+      "date": "2008:08:11 11:14:56"
+    },
+    "/media/6351448921588783195_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (156 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(156%20of%20161).jpeg",
+      "similarity": 78,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(156%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:52:48"
+    },
+    "/media/6351448921588783195_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (21 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(21%20of%20161).jpeg",
+      "similarity": 78,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(21%20of%20161).jpeg",
+      "latitude": 45.992133333333335,
+      "longitude": -60.70859444444445,
+      "date": "2008:08:03 13:38:27"
+    },
+    "/media/6351448921588783195_image_2.JPG": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (137 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(137%20of%20161).jpeg",
+      "similarity": 79,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(137%20of%20161).jpeg",
+      "latitude": 47.61018333333333,
+      "longitude": -57.60943888888889,
+      "date": "2008:08:24 11:41:13"
+    },
+    "/media/6596045885944420226_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (128 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "similarity": 84,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 14:02:35"
+    },
+    "/media/8413902366549795657_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (155 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(155%20of%20161).jpeg",
+      "similarity": 84,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(155%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:52:38"
+    },
+    "/media/8413902366549795657_image_3.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (71 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(71%20of%20161).jpeg",
+      "similarity": 78,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(71%20of%20161).jpeg",
+      "latitude": 49.27475277777778,
+      "longitude": -57.50543888888889,
+      "date": "2008:08:13 09:01:04"
+    },
+    "/media/8413902366549795657_image_7.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (154 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(154%20of%20161).jpeg",
+      "similarity": 79,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(154%20of%20161).jpeg",
+      "latitude": 46.18680277777777,
+      "longitude": -60.61541388888889,
+      "date": "2008:08:29 09:27:13"
+    },
+    "/media/8413902366549795657_image_8.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (128 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "similarity": 84,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(128%20of%20161).jpeg",
+      "latitude": 49.59419166666667,
+      "longitude": -57.78389166666666,
+      "date": "2008:08:20 14:02:35"
+    },
+    "/media/8720269709604075403_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (45 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(45%20of%20161).jpeg",
+      "similarity": 85,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(45%20of%20161).jpeg",
+      "latitude": 47.58261111111111,
+      "longitude": -59.14024444444444,
+      "date": "2008:08:08 08:39:38"
+    },
+    "/media/8940249301427418807_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (71 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(71%20of%20161).jpeg",
+      "similarity": 79,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(71%20of%20161).jpeg",
+      "latitude": 49.27475277777778,
+      "longitude": -57.50543888888889,
+      "date": "2008:08:13 09:01:04"
+    },
+    "/media/8940249301427418807_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (118 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(118%20of%20161).jpeg",
+      "similarity": 81,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(118%20of%20161).jpeg",
+      "latitude": 49.58315,
+      "longitude": -57.90096666666666,
+      "date": "2008:08:19 18:32:43"
+    },
+    "/media/8940249301427418807_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (127 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(127%20of%20161).jpeg",
+      "similarity": 78,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(127%20of%20161).jpeg",
+      "latitude": 49.65181388888889,
+      "longitude": -57.755833333333335,
+      "date": "2008:08:20 13:22:54"
+    },
+    "/media/8964351480898362551_image_0.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (127 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(127%20of%20161).jpeg",
+      "similarity": 78,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(127%20of%20161).jpeg",
+      "latitude": 49.65181388888889,
+      "longitude": -57.755833333333335,
+      "date": "2008:08:20 13:22:54"
+    },
+    "/media/8964351480898362551_image_1.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (118 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(118%20of%20161).jpeg",
+      "similarity": 81,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(118%20of%20161).jpeg",
+      "latitude": 49.58315,
+      "longitude": -57.90096666666666,
+      "date": "2008:08:19 18:32:43"
+    },
+    "/media/8964351480898362551_image_2.jpg": {
+      "geotaggedFile": "Newfoundland and Nova Scotia Trip - 2008 (71 of 161).jpeg",
+      "geotaggedPath": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(71%20of%20161).jpeg",
+      "similarity": 79,
+      "path": "/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(71%20of%20161).jpeg",
+      "latitude": 49.27475277777778,
+      "longitude": -57.50543888888889,
+      "date": "2008:08:13 09:01:04"
+    }
+  }
+}
