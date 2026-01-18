@@ -3,8 +3,8 @@
 import { useEffect, useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 
-// Get base path for assets (empty in dev, '/newfienova' in prod)
-const basePath = process.env.NODE_ENV === 'production' ? '/newfienova' : '';
+// Get base path for assets from Next.js public env variable
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 interface ImageMatch {
   geotaggedFile: string;

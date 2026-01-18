@@ -5,8 +5,8 @@ import { useMemo } from 'react';
 import PostMap from './PostMap';
 import Comments from './Comments';
 
-// Get base path for assets (empty in dev, '/newfienova' in prod)
-const basePath = process.env.NODE_ENV === 'production' ? '/newfienova' : '';
+// Get base path for assets from Next.js public env variable
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 interface ImageMatch {
   geotaggedFile: string;
