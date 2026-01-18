@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { basePath } from '@/lib/config';
 
 interface HeroProps {
   title: string;
@@ -16,7 +17,7 @@ export default function Hero({ title, subtitle, dateRange, backgroundImage }: He
       {backgroundImage && (
         <div className="absolute inset-0 z-0">
           <Image
-            src={backgroundImage}
+            src={`${basePath}${backgroundImage}`}
             alt="Maritime landscape"
             fill
             className="object-cover"

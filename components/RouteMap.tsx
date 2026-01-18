@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
+import { basePath } from '@/lib/config';
 
 // Location data type
 interface Location {
@@ -141,7 +142,7 @@ export default function RouteMap({ locations, isExpanded = false, onToggle }: Ro
                     <p className="text-stone-500 text-xs">{location.date}</p>
                   )}
                   <img
-                    src={decodeURIComponent(location.path)}
+                    src={`${basePath}${decodeURIComponent(location.path)}`}
                     alt={`Photo ${idx + 1}`}
                     className="mt-2 max-w-[200px] rounded"
                   />

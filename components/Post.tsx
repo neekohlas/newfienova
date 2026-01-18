@@ -4,9 +4,7 @@ import Image from 'next/image';
 import { useMemo } from 'react';
 import PostMap from './PostMap';
 import Comments from './Comments';
-
-// Get base path for assets from Next.js public env variable
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+import { basePath } from '@/lib/config';
 
 interface ImageMatch {
   geotaggedFile: string;
