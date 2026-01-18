@@ -3,6 +3,9 @@
 import { useEffect, useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 
+// Get base path for assets (empty in dev, '/newfienova' in prod)
+const basePath = process.env.NODE_ENV === 'production' ? '/newfienova' : '';
+
 interface ImageMatch {
   geotaggedFile: string;
   geotaggedPath: string;
@@ -123,7 +126,7 @@ function MapContentComponent({
               background: white;
             ">
               <img
-                src="${imagePath}"
+                src="${basePath}${imagePath}"
                 alt="Photo"
                 style="width: 100%; height: 100%; object-fit: cover;"
               />
@@ -143,7 +146,7 @@ function MapContentComponent({
             <Popup>
               <div className="text-sm">
                 <img
-                  src={imagePath}
+                  src={`${basePath}${imagePath}`}
                   alt="Photo from post"
                   className="max-w-[220px] rounded mb-2"
                 />

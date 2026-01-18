@@ -5,6 +5,9 @@ import { useMemo } from 'react';
 import PostMap from './PostMap';
 import Comments from './Comments';
 
+// Get base path for assets (empty in dev, '/newfienova' in prod)
+const basePath = process.env.NODE_ENV === 'production' ? '/newfienova' : '';
+
 interface ImageMatch {
   geotaggedFile: string;
   geotaggedPath: string;
@@ -200,7 +203,7 @@ export default function Post({
               return (
                 <figure key={`img-${idx}`} className="my-8">
                   <Image
-                    src={imageSrc}
+                    src={`${basePath}${imageSrc}`}
                     alt={`Photo from ${title}`}
                     width={1600}
                     height={1200}
@@ -278,7 +281,7 @@ export default function Post({
               {videos.map((video, idx) => (
                 <figure key={idx} className="my-8">
                   <video
-                    src={video}
+                    src={`${basePath}${video}`}
                     controls
                     className="w-full rounded-lg shadow-lg"
                     preload="metadata"
