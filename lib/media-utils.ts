@@ -1,12 +1,27 @@
 import { basePath } from '@/lib/config';
 
 export interface MediaItem {
-  type: 'image' | 'video' | 'map';
+  type: 'image' | 'video' | 'map' | 'postHeader';
   src: string;
   alt: string;
   caption?: string;
   mapCenter?: [number, number];
   mapZoom?: number;
+  // For postHeader type
+  postId?: string;
+  postTitle?: string;
+  postDate?: string;
+  photoLocations?: Array<{ lat: number; lng: number; label?: string }>;
+}
+
+interface ImageMatch {
+  latitude: number;
+  longitude: number;
+  path: string;
+}
+
+interface ImageMatches {
+  [mediaPath: string]: ImageMatch;
 }
 
 interface PostData {
@@ -15,6 +30,7 @@ interface PostData {
   content: string;
   images: string[];
   videos?: string[];
+  formattedDate?: string;
   embeddedMap?: {
     center: [number, number];
     zoom: number;
@@ -108,14 +124,43 @@ export function extractMediaFromPost(
 export function buildGlobalMediaArray(
   posts: PostData[],
   imageCaptions: ImageCaptions,
-  videoCaptions: VideoCaptions
+  videoCaptions: VideoCaptions,
+  imageMatches?: ImageMatches
 ): { globalMedia: MediaItem[]; offsets: Map<string, number> } {
   const globalMedia: MediaItem[] = [];
   const offsets = new Map<string, number>();
 
   for (const post of posts) {
     offsets.set(post.id, globalMedia.length);
+
+    // Extract photo locations for this post from imageMatches
+    const photoLocations: Array<{ lat: number; lng: number; label?: string }> = [];
+    if (imageMatches) {
+      for (const imagePath of post.images) {
+        const match = imageMatches[imagePath];
+        if (match && match.latitude && match.longitude) {
+          photoLocations.push({
+            lat: match.latitude,
+            lng: match.longitude,
+          });
+        }
+      }
+    }
+
+    // Add post header as the first item for this post (only if post has media)
     const postMedia = extractMediaFromPost(post, imageCaptions, videoCaptions);
+    if (postMedia.length > 0) {
+      globalMedia.push({
+        type: 'postHeader',
+        src: '',
+        alt: post.title,
+        postId: post.id,
+        postTitle: post.title,
+        postDate: post.formattedDate,
+        photoLocations: photoLocations.length > 0 ? photoLocations : undefined,
+      });
+    }
+
     globalMedia.push(...postMedia);
   }
 

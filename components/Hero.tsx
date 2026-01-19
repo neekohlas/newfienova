@@ -29,7 +29,7 @@ export default function Hero({ title, subtitle, dateRange, backgroundImage }: He
       {/* Gradient Overlay */}
       <div className="hero-overlay relative z-10">
         <div className="article-container">
-          <p className="byline text-stone-900 font-medium mb-4">{dateRange}</p>
+          <p className="byline font-medium mb-4" style={{ color: 'white' }}>{dateRange}</p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
             {title}
           </h1>

@@ -347,7 +347,8 @@ Some Acadians eventually returned, settling in areas the British considered marg
 };
 
 // Find a good hero image from the geotagged photos
-const heroImage = '/geotagged/Newfoundland%20and%20Nova%20Scotia%20Trip%20-%202008%20(51%20of%20161).jpeg';
+// Using first image from "Scenery" post for better text readability
+const heroImage = '/geotagged2/Nova_Newfie%20-%2099.jpeg';
 
 export default async function Home() {
   const postsData = await getPostsData();
@@ -372,7 +373,8 @@ export default async function Home() {
   const { globalMedia, offsets: mediaOffsets } = buildGlobalMediaArray(
     posts,
     imageCaptionsData as { [key: string]: string },
-    allVideoCaptions
+    allVideoCaptions,
+    imageMatchesData.matches as unknown as { [key: string]: { latitude: number; longitude: number; path: string } }
   );
 
   return (
@@ -426,11 +428,11 @@ export default async function Home() {
       </section>
 
       {/* Posts organized by chapter/date */}
-      {chapters.map((chapter: { date: string; fullDate: string; posts: Array<{ id: string; title: string; content: string; formattedDate: string; author: string; images: string[]; heroImage?: string | null; videos?: string[]; comments?: Array<{ author: string; date: string; text: string }>; embeddedMap?: { center: [number, number]; zoom: number; title: string } }> }, chapterIdx: number) => (
+      {chapters.map((chapter: { date: string; fullDate: string; posts: Array<{ id: string; title: string; content: string; formattedDate: string; author: string; images: string[]; heroImage?: string | null; videos?: string[]; videoCaptions?: { [key: string]: string }; comments?: Array<{ author: string; date: string; text: string }>; embeddedMap?: { center: [number, number]; zoom: number; title: string } }> }, chapterIdx: number) => (
         <section key={chapterIdx}>
           <ChapterDivider date={chapter.date} />
 
-          {chapter.posts.map((post: { id: string; title: string; content: string; formattedDate: string; author: string; images: string[]; heroImage?: string | null; videos?: string[]; comments?: Array<{ author: string; date: string; text: string }>; embeddedMap?: { center: [number, number]; zoom: number; title: string } }) => (
+          {chapter.posts.map((post: { id: string; title: string; content: string; formattedDate: string; author: string; images: string[]; heroImage?: string | null; videos?: string[]; videoCaptions?: { [key: string]: string }; comments?: Array<{ author: string; date: string; text: string }>; embeddedMap?: { center: [number, number]; zoom: number; title: string } }) => (
               <div key={post.id}>
                 <Post
                   id={post.id}
@@ -441,6 +443,7 @@ export default async function Home() {
                   images={post.images}
                   heroImage={post.heroImage}
                   videos={post.videos}
+                  videoCaptions={post.videoCaptions}
                   imageCaptions={imageCaptionsData as any}
                   imageMatches={imageMatchesData.matches as any}
                   comments={post.comments}

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useMemo } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import PostMap from './PostMap';
 import Comments from './Comments';
@@ -96,6 +96,12 @@ export default function Post({
   globalMedia,
   globalMediaOffset = 0,
 }: PostProps) {
+  // Track if we're mounted on client to avoid hydration mismatches with complex HTML
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   // Process content to extract text blocks and image positions
   const contentBlocks = useMemo((): ContentBlock[] => {
     const hasVideosNow = videos.length > 0;
@@ -253,7 +259,8 @@ export default function Post({
 
   // Use global media array if available, otherwise use local
   const lightboxMedia = globalMedia || allMedia;
-  const mediaOffset = globalMedia ? globalMediaOffset : 0;
+  // Add 1 to offset when using globalMedia to account for postHeader
+  const mediaOffset = globalMedia ? globalMediaOffset + 1 : 0;
 
   const hasMedia = allMedia.length > 0;
 
@@ -261,7 +268,7 @@ export default function Post({
     <article id={`post-${id}`} className="py-16 border-b border-stone-200 last:border-b-0">
       <div className="article-container">
         {/* Date and author */}
-        <p className="byline mb-3">{formattedDate}</p>
+        <p className="byline text-stone-500 mb-3">{formattedDate}</p>
 
         {/* Title with anchor for navigation */}
         <h2 id={`title-${id}`} className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight scroll-mt-24">
@@ -276,16 +283,16 @@ export default function Post({
           imageMatches={imageMatches}
         />
 
-        {/* Photo gallery hint - top of post */}
-        {hasMedia && allMedia.length > 1 && (
-          <p className="text-sm text-stone-400 italic mb-6 text-center">
-            Click any photo to browse all {allMedia.length} images and videos from this entry
-          </p>
-        )}
-
         {/* Content with images in their original positions */}
         <div className="post-content" suppressHydrationWarning>
-          {contentBlocks.map((block, idx) => {
+          {!isMounted ? (
+            // Placeholder during SSR to avoid hydration mismatch with complex HTML
+            <div className="animate-pulse">
+              <div className="h-4 bg-stone-200 rounded w-3/4 mb-4"></div>
+              <div className="h-4 bg-stone-200 rounded w-full mb-4"></div>
+              <div className="h-4 bg-stone-200 rounded w-5/6 mb-4"></div>
+            </div>
+          ) : contentBlocks.map((block, idx) => {
             if (block.type === 'image') {
               // Render image from the images array at this position
               const imageSrc = contentImages[block.imageIndex];
@@ -295,7 +302,7 @@ export default function Post({
               const currentMediaIndex = mediaOffset + mediaCounter++;
 
               return (
-                <figure key={`img-${idx}`} className="my-8">
+                <figure key={`img-${idx}`} className="my-8" suppressHydrationWarning>
                   <Lightbox
                     src={`${basePath}${imageSrc}`}
                     alt={caption || `Photo from ${title}`}
@@ -313,7 +320,7 @@ export default function Post({
                     />
                   </Lightbox>
                   {caption && (
-                    <figcaption className="text-sm text-stone-500 text-left">
+                    <figcaption className="text-sm text-stone-500 text-left" suppressHydrationWarning>
                       {caption}
                     </figcaption>
                   )}
@@ -332,7 +339,7 @@ export default function Post({
               const posterSrc = (videoThumbnails as Record<string, string>)[videoSrc];
 
               return (
-                <figure key={`video-${idx}`} className="my-8">
+                <figure key={`video-${idx}`} className="my-8" suppressHydrationWarning>
                   <Lightbox
                     src={`${basePath}${videoSrc}`}
                     alt={caption}
@@ -350,9 +357,11 @@ export default function Post({
                       Your browser does not support the video tag.
                     </video>
                   </Lightbox>
-                  <figcaption className="text-sm text-stone-500 mt-2 text-center">
-                    {caption}
-                  </figcaption>
+                  {caption && (
+                    <figcaption className="text-sm text-stone-500 text-left" suppressHydrationWarning>
+                      {caption}
+                    </figcaption>
+                  )}
                 </figure>
               );
             }
@@ -361,7 +370,7 @@ export default function Post({
               // Render embedded map using Leaflet for reliable zoom control
               const currentMediaIndex = mediaOffset + mediaCounter++;
               return (
-                <div key={`map-${idx}`} className="my-8">
+                <div key={`map-${idx}`} className="my-8" suppressHydrationWarning>
                   <Lightbox
                     src=""
                     alt={embeddedMap.title || 'Route map'}
@@ -377,7 +386,7 @@ export default function Post({
                       />
                     </div>
                   </Lightbox>
-                  <p className="text-sm text-stone-500 mt-2 text-center">Where might we be headed next? (Hint: follow the dotted lines.)</p>
+                  <p className="text-sm text-stone-500 mt-2 text-center" suppressHydrationWarning>Where might we be headed next? (Hint: follow the dotted lines.)</p>
                 </div>
               );
             }
@@ -411,7 +420,7 @@ export default function Post({
           {/* Photo gallery hint - bottom of post */}
           {hasMedia && allMedia.length > 1 && (
             <p className="text-sm text-stone-400 italic mt-8 text-center">
-              Click any photo above to browse all media from this entry
+              Click any photo to open the gallery and browse the entire journey
             </p>
           )}
 

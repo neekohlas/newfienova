@@ -123,7 +123,6 @@ h1, h2, h3 {
 .byline {
   font-family: var(--font-display), Georgia, serif;
   font-size: 0.875rem;
-  color: #78716c;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }

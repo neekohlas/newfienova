@@ -4,13 +4,18 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 export interface MediaItem {
-  type: 'image' | 'video' | 'map';
+  type: 'image' | 'video' | 'map' | 'postHeader';
   src: string;
   alt: string;
   caption?: string;
   // For maps
   mapCenter?: [number, number];
   mapZoom?: number;
+  // For postHeader
+  postId?: string;
+  postTitle?: string;
+  postDate?: string;
+  photoLocations?: Array<{ lat: number; lng: number; label?: string }>;
 }
 
 interface LightboxProps {
@@ -210,12 +215,56 @@ export default function Lightbox({
 
             {/* The actual media */}
             <div className="relative max-w-[100vw] max-h-[85vh] md:max-h-[90vh] flex items-center justify-center px-2 md:px-4">
-              {currentMedia.type === 'video' ? (
+              {currentMedia.type === 'postHeader' ? (
+                <div className="w-[90vw] max-w-2xl flex flex-col items-center justify-center min-h-[60vh]">
+                  {/* Decorative line */}
+                  <div className="w-16 h-0.5 bg-white/20 mb-8" />
+
+                  {/* Post date */}
+                  <p className="text-white/50 text-sm md:text-base mb-4 tracking-wide uppercase">
+                    {currentMedia.postDate}
+                  </p>
+
+                  {/* Post title */}
+                  <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold leading-tight text-center mb-8">
+                    {currentMedia.postTitle}
+                  </h2>
+
+                  {/* Photo count and map link */}
+                  {currentMedia.photoLocations && currentMedia.photoLocations.length > 0 && (
+                    <div className="text-center">
+                      <p className="text-white/30 text-sm mb-4">
+                        {currentMedia.photoLocations.length} geotagged photo{currentMedia.photoLocations.length !== 1 ? 's' : ''} from this entry
+                      </p>
+                      {currentMedia.postId && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            closeLightbox();
+                            // Small delay to let lightbox close, then scroll
+                            setTimeout(() => {
+                              const element = document.getElementById(`post-${currentMedia.postId}`);
+                              if (element) {
+                                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                              }
+                            }, 100);
+                          }}
+                          className="text-white/50 hover:text-white text-sm underline underline-offset-4 transition-colors"
+                        >
+                          View photo locations on the map
+                        </button>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Decorative line */}
+                  <div className="w-16 h-0.5 bg-white/20 mt-8" />
+                </div>
+              ) : currentMedia.type === 'video' ? (
                 <video
                   key={currentMedia.src}
                   src={currentMedia.src}
                   controls
-                  autoPlay
                   className="max-w-full max-h-[80vh] md:max-h-[85vh] w-auto h-auto"
                 >
                   Your browser does not support the video tag.
@@ -242,8 +291,8 @@ export default function Lightbox({
               )}
             </div>
 
-            {/* Caption below media */}
-            {currentMedia.caption && (
+            {/* Caption below media (not for postHeader) */}
+            {currentMedia.type !== 'postHeader' && currentMedia.caption && (
               <p className="text-white/70 text-sm mt-3 text-center max-w-2xl px-4">
                 {currentMedia.caption}
               </p>
