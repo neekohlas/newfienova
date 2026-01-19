@@ -289,7 +289,7 @@ export default function Post({
                       title={embeddedMap.title}
                     />
                   </div>
-                  <p className="text-sm text-stone-500 mt-2 text-center">Hint: follow the dotted lines.</p>
+                  <p className="text-sm text-stone-500 mt-2 text-center">Where might we be headed next? (Hint: follow the dotted lines.)</p>
                 </div>
               );
             }
