@@ -42,6 +42,7 @@ export default function AIContextNote({ title, content }: AIContextNoteProps) {
             />
           </svg>
           Historical Context
+          <span className="text-xs text-stone-400 font-normal">(AI-generated)</span>
         </span>
       </div>
       <h4 className="font-bold text-stone-800 mb-2">{title}</h4>

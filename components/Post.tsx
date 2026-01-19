@@ -5,6 +5,7 @@ import { useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import PostMap from './PostMap';
 import Comments from './Comments';
+import Lightbox from './Lightbox';
 import { basePath } from '@/lib/config';
 
 // Dynamically import the embedded map component
@@ -230,14 +231,20 @@ export default function Post({
 
               return (
                 <figure key={`img-${idx}`} className="my-8">
-                  <Image
+                  <Lightbox
                     src={`${basePath}${imageSrc}`}
                     alt={caption || `Photo from ${title}`}
-                    width={1600}
-                    height={1200}
-                    quality={90}
-                    className="w-full h-auto"
-                  />
+                    caption={caption}
+                  >
+                    <Image
+                      src={`${basePath}${imageSrc}`}
+                      alt={caption || `Photo from ${title}`}
+                      width={1600}
+                      height={1200}
+                      quality={90}
+                      className="w-full h-auto"
+                    />
+                  </Lightbox>
                   {caption && (
                     <figcaption className="text-sm text-stone-500 text-left">
                       {caption}
