@@ -225,6 +225,7 @@ export default function Post({
           mediaItems.push({
             type: 'image',
             src: `${basePath}${imageSrc}`,
+            originalPath: imageSrc,
             alt: caption || `Photo from ${title}`,
             caption,
           });
@@ -236,6 +237,7 @@ export default function Post({
           mediaItems.push({
             type: 'video',
             src: `${basePath}${videoSrc}`,
+            originalPath: videoSrc,
             alt: caption,
             caption,
           });

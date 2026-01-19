@@ -3,7 +3,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import { basePath } from '@/lib/config';
-import { getOptimizedImagePath } from '@/lib/image-utils';
+import { getInlineImagePath } from '@/lib/image-utils';
 
 interface ImageMatch {
   geotaggedFile: string;
@@ -170,7 +170,7 @@ function MapContentComponent({
                   background: white;
                 ">
                   <img
-                    src="${getOptimizedImagePath(imagePath)}"
+                    src="${getInlineImagePath(imagePath)}"
                     alt="Photo"
                     style="width: 100%; height: 100%; object-fit: cover;"
                     loading="lazy"
@@ -209,7 +209,7 @@ function MapContentComponent({
                   </>
                 ) : (
                   <img
-                    src={getOptimizedImagePath(imagePath)}
+                    src={getInlineImagePath(imagePath)}
                     alt="Photo from post"
                     className="max-w-[220px] rounded mb-2"
                     loading="lazy"

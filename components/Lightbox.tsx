@@ -2,12 +2,15 @@
 
 import { useState, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { getGalleryImagePath } from '@/lib/image-utils';
 
 export interface MediaItem {
   type: 'image' | 'video' | 'map' | 'postHeader';
   src: string;
   alt: string;
   caption?: string;
+  // Original path without basePath, for image optimization transforms
+  originalPath?: string;
   // For maps
   mapCenter?: [number, number];
   mapZoom?: number;
@@ -280,11 +283,10 @@ export default function Lightbox({
               ) : (
                 <Image
                   key={currentMedia.src}
-                  src={currentMedia.src}
+                  src={currentMedia.originalPath ? getGalleryImagePath(currentMedia.originalPath) : currentMedia.src}
                   alt={currentMedia.alt}
-                  width={1920}
-                  height={1440}
-                  quality={95}
+                  width={1400}
+                  height={1050}
                   className="max-w-full max-h-[80vh] md:max-h-[85vh] w-auto h-auto object-contain"
                   priority
                 />

@@ -5,6 +5,8 @@ export interface MediaItem {
   src: string;
   alt: string;
   caption?: string;
+  // Original path without basePath, for image optimization transforms
+  originalPath?: string;
   mapCenter?: [number, number];
   mapZoom?: number;
   // For postHeader type
@@ -88,6 +90,7 @@ export function extractMediaFromPost(
           mediaItems.push({
             type: 'image',
             src: `${basePath}${imageSrc}`,
+            originalPath: imageSrc,
             alt: caption || `Photo from ${post.title}`,
             caption,
           });
@@ -100,6 +103,7 @@ export function extractMediaFromPost(
           mediaItems.push({
             type: 'video',
             src: `${basePath}${videoSrc}`,
+            originalPath: videoSrc,
             alt: caption,
             caption,
           });

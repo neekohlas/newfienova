@@ -1,8 +1,9 @@
 /**
  * Image Optimization Script
  *
- * Generates smaller versions of images for inline display while
- * preserving originals for the lightbox/gallery view.
+ * Generates two sizes of optimized images:
+ * - Inline: Small images for blog post display (800px)
+ * - Gallery: Larger images for lightbox/gallery view (1400px)
  *
  * Usage: node scripts/optimize-images.js
  */
@@ -16,13 +17,20 @@ const CONFIG = {
   // Source directories containing original images
   sourceDirs: ['public/geotagged', 'public/geotagged2', 'public/media'],
 
-  // Output directory for optimized images
-  outputDir: 'public/images-optimized',
+  // Output directories
+  inlineDir: 'public/images-inline',
+  galleryDir: 'public/images-gallery',
 
   // Inline image settings (for display in blog posts)
   inline: {
-    width: 800,        // Max width in pixels
-    quality: 60,       // JPEG quality (1-100) - lower for faster mobile loading
+    width: 800,
+    quality: 60,
+  },
+
+  // Gallery image settings (for lightbox/fullscreen viewing)
+  gallery: {
+    width: 1400,
+    quality: 75,
   },
 
   // Supported image extensions
@@ -31,11 +39,9 @@ const CONFIG = {
 
 // Track statistics
 const stats = {
-  processed: 0,
-  skipped: 0,
-  errors: 0,
-  totalOriginalSize: 0,
-  totalOptimizedSize: 0,
+  inline: { processed: 0, skipped: 0, errors: 0, totalSize: 0 },
+  gallery: { processed: 0, skipped: 0, errors: 0, totalSize: 0 },
+  originalSize: 0,
 };
 
 /**
@@ -57,8 +63,8 @@ function getImageFiles(dir) {
 /**
  * Ensure output directory exists
  */
-function ensureOutputDir(subDir) {
-  const fullPath = path.join(CONFIG.outputDir, subDir);
+function ensureOutputDir(baseDir, subDir) {
+  const fullPath = path.join(baseDir, subDir);
   if (!fs.existsSync(fullPath)) {
     fs.mkdirSync(fullPath, { recursive: true });
   }
@@ -66,19 +72,18 @@ function ensureOutputDir(subDir) {
 }
 
 /**
- * Optimize a single image
+ * Optimize a single image to a specific size
  */
-async function optimizeImage(sourcePath, outputPath) {
+async function optimizeImage(sourcePath, outputPath, settings, statsObj) {
   try {
     const originalStats = fs.statSync(sourcePath);
-    stats.totalOriginalSize += originalStats.size;
 
     // Check if optimized version already exists and is newer than source
     if (fs.existsSync(outputPath)) {
       const optimizedStats = fs.statSync(outputPath);
       if (optimizedStats.mtime >= originalStats.mtime) {
-        stats.skipped++;
-        stats.totalOptimizedSize += optimizedStats.size;
+        statsObj.skipped++;
+        statsObj.totalSize += optimizedStats.size;
         return { skipped: true };
       }
     }
@@ -89,8 +94,8 @@ async function optimizeImage(sourcePath, outputPath) {
 
     // Only resize if image is larger than target width
     let pipeline = image;
-    if (metadata.width > CONFIG.inline.width) {
-      pipeline = pipeline.resize(CONFIG.inline.width, null, {
+    if (metadata.width > settings.width) {
+      pipeline = pipeline.resize(settings.width, null, {
         withoutEnlargement: true,
         fit: 'inside',
       });
@@ -98,29 +103,23 @@ async function optimizeImage(sourcePath, outputPath) {
 
     // Output as JPEG with specified quality
     await pipeline
-      .jpeg({ quality: CONFIG.inline.quality, mozjpeg: true })
+      .jpeg({ quality: settings.quality, mozjpeg: true })
       .toFile(outputPath);
 
     const optimizedStats = fs.statSync(outputPath);
-    stats.totalOptimizedSize += optimizedStats.size;
-    stats.processed++;
+    statsObj.totalSize += optimizedStats.size;
+    statsObj.processed++;
 
-    const savings = ((1 - optimizedStats.size / originalStats.size) * 100).toFixed(1);
-    return {
-      skipped: false,
-      originalSize: originalStats.size,
-      optimizedSize: optimizedStats.size,
-      savings: `${savings}%`
-    };
+    return { skipped: false };
   } catch (error) {
-    stats.errors++;
+    statsObj.errors++;
     console.error(`  Error processing ${sourcePath}: ${error.message}`);
     return { error: true };
   }
 }
 
 /**
- * Process all images in a directory
+ * Process all images in a directory for both sizes
  */
 async function processDirectory(sourceDir) {
   const dirName = path.basename(sourceDir);
@@ -133,57 +132,44 @@ async function processDirectory(sourceDir) {
   }
 
   console.log(`  Found ${files.length} images`);
-  const outputDir = ensureOutputDir(dirName);
+
+  const inlineOutputDir = ensureOutputDir(CONFIG.inlineDir, dirName);
+  const galleryOutputDir = ensureOutputDir(CONFIG.galleryDir, dirName);
 
   for (const file of files) {
     const sourcePath = path.join(sourceDir, file);
-    // Keep same filename but ensure .jpg extension for consistency
     const outputFileName = file.replace(/\.(jpeg|png)$/i, '.jpg');
-    const outputPath = path.join(outputDir, outputFileName);
 
-    const result = await optimizeImage(sourcePath, outputPath);
+    // Track original size (only once per file)
+    const originalStats = fs.statSync(sourcePath);
+    stats.originalSize += originalStats.size;
 
-    if (result.skipped) {
-      process.stdout.write('.');
-    } else if (result.error) {
+    // Generate inline version
+    const inlineResult = await optimizeImage(
+      sourcePath,
+      path.join(inlineOutputDir, outputFileName),
+      CONFIG.inline,
+      stats.inline
+    );
+
+    // Generate gallery version
+    const galleryResult = await optimizeImage(
+      sourcePath,
+      path.join(galleryOutputDir, outputFileName),
+      CONFIG.gallery,
+      stats.gallery
+    );
+
+    // Show progress
+    if (inlineResult.error || galleryResult.error) {
       process.stdout.write('X');
+    } else if (inlineResult.skipped && galleryResult.skipped) {
+      process.stdout.write('.');
     } else {
       process.stdout.write('✓');
     }
   }
   console.log('');
-}
-
-/**
- * Generate mapping file for the app to use
- */
-function generateMapping() {
-  const mapping = {};
-
-  for (const sourceDir of CONFIG.sourceDirs) {
-    const dirName = path.basename(sourceDir);
-    const outputDir = path.join(CONFIG.outputDir, dirName);
-
-    if (!fs.existsSync(outputDir)) continue;
-
-    const files = fs.readdirSync(outputDir);
-    for (const file of files) {
-      // Map original path to optimized path
-      // Original: /geotagged/image.jpeg -> Optimized: /images-optimized/geotagged/image.jpg
-      const originalPath = `/${dirName}/${file.replace('.jpg', '.jpeg')}`;
-      const optimizedPath = `/images-optimized/${dirName}/${file}`;
-      mapping[originalPath] = optimizedPath;
-
-      // Also map .jpg extension
-      const originalPathJpg = `/${dirName}/${file}`;
-      mapping[originalPathJpg] = optimizedPath;
-    }
-  }
-
-  const mappingPath = path.join('data', 'image-optimization-map.json');
-  fs.writeFileSync(mappingPath, JSON.stringify(mapping, null, 2));
-  console.log(`\nGenerated mapping file: ${mappingPath}`);
-  return mapping;
 }
 
 /**
@@ -203,30 +189,25 @@ async function main() {
   console.log('Image Optimization Script');
   console.log('='.repeat(60));
   console.log(`\nSettings:`);
-  console.log(`  Inline width: ${CONFIG.inline.width}px`);
-  console.log(`  JPEG quality: ${CONFIG.inline.quality}`);
-  console.log(`  Output: ${CONFIG.outputDir}`);
+  console.log(`  Inline:  ${CONFIG.inline.width}px @ quality ${CONFIG.inline.quality}`);
+  console.log(`  Gallery: ${CONFIG.gallery.width}px @ quality ${CONFIG.gallery.quality}`);
 
   // Process each source directory
   for (const sourceDir of CONFIG.sourceDirs) {
     await processDirectory(sourceDir);
   }
 
-  // Generate mapping file
-  generateMapping();
-
   // Print summary
   console.log('\n' + '='.repeat(60));
   console.log('Summary');
   console.log('='.repeat(60));
-  console.log(`  Processed: ${stats.processed}`);
-  console.log(`  Skipped (already optimized): ${stats.skipped}`);
-  console.log(`  Errors: ${stats.errors}`);
-  console.log(`  Original total size: ${formatBytes(stats.totalOriginalSize)}`);
-  console.log(`  Optimized total size: ${formatBytes(stats.totalOptimizedSize)}`);
-
-  const totalSavings = ((1 - stats.totalOptimizedSize / stats.totalOriginalSize) * 100).toFixed(1);
-  console.log(`  Total savings: ${totalSavings}%`);
+  console.log(`\n  Original total: ${formatBytes(stats.originalSize)}`);
+  console.log(`\n  Inline (${CONFIG.inline.width}px):`);
+  console.log(`    Processed: ${stats.inline.processed}, Skipped: ${stats.inline.skipped}, Errors: ${stats.inline.errors}`);
+  console.log(`    Total size: ${formatBytes(stats.inline.totalSize)} (${((1 - stats.inline.totalSize / stats.originalSize) * 100).toFixed(1)}% savings)`);
+  console.log(`\n  Gallery (${CONFIG.gallery.width}px):`);
+  console.log(`    Processed: ${stats.gallery.processed}, Skipped: ${stats.gallery.skipped}, Errors: ${stats.gallery.errors}`);
+  console.log(`    Total size: ${formatBytes(stats.gallery.totalSize)} (${((1 - stats.gallery.totalSize / stats.originalSize) * 100).toFixed(1)}% savings)`);
   console.log('='.repeat(60));
 }
 
