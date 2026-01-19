@@ -5,8 +5,9 @@ import { useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import PostMap from './PostMap';
 import Comments from './Comments';
-import Lightbox from './Lightbox';
+import Lightbox, { MediaItem } from './Lightbox';
 import { basePath } from '@/lib/config';
+import videoThumbnails from '@/data/video-thumbnails.json';
 
 // Dynamically import the embedded map component
 const EmbeddedMapComponent = dynamic(() => import('./EmbeddedMap'), {
@@ -200,6 +201,44 @@ export default function Post({
     return images;
   }, [images]);
 
+  // Build array of all media items in order of appearance for lightbox navigation
+  const allMedia = useMemo((): MediaItem[] => {
+    const mediaItems: MediaItem[] = [];
+
+    for (const block of contentBlocks) {
+      if (block.type === 'image') {
+        const imageSrc = contentImages[block.imageIndex];
+        if (imageSrc) {
+          const caption = imageCaptions[imageSrc];
+          mediaItems.push({
+            type: 'image',
+            src: `${basePath}${imageSrc}`,
+            alt: caption || `Photo from ${title}`,
+            caption,
+          });
+        }
+      } else if (block.type === 'video') {
+        const videoSrc = videos[block.videoIndex];
+        if (videoSrc) {
+          const caption = videoCaptions[videoSrc] || 'Video from the trip';
+          mediaItems.push({
+            type: 'video',
+            src: `${basePath}${videoSrc}`,
+            alt: caption,
+            caption,
+          });
+        }
+      }
+    }
+
+    return mediaItems;
+  }, [contentBlocks, contentImages, videos, imageCaptions, videoCaptions, title]);
+
+  // Track which media index we're at as we render
+  let mediaCounter = 0;
+
+  const hasMedia = allMedia.length > 0;
+
   return (
     <article id={`post-${id}`} className="py-16 border-b border-stone-200 last:border-b-0">
       <div className="article-container">
@@ -219,6 +258,13 @@ export default function Post({
           imageMatches={imageMatches}
         />
 
+        {/* Photo gallery hint - top of post */}
+        {hasMedia && allMedia.length > 1 && (
+          <p className="text-sm text-stone-400 italic mb-6 text-center">
+            Click any photo to browse all {allMedia.length} images and videos from this entry
+          </p>
+        )}
+
         {/* Content with images in their original positions */}
         <div className="post-content" suppressHydrationWarning>
           {contentBlocks.map((block, idx) => {
@@ -228,6 +274,7 @@ export default function Post({
               if (!imageSrc) return null;
 
               const caption = imageCaptions[imageSrc];
+              const currentMediaIndex = mediaCounter++;
 
               return (
                 <figure key={`img-${idx}`} className="my-8">
@@ -235,6 +282,8 @@ export default function Post({
                     src={`${basePath}${imageSrc}`}
                     alt={caption || `Photo from ${title}`}
                     caption={caption}
+                    allMedia={allMedia}
+                    currentIndex={currentMediaIndex}
                   >
                     <Image
                       src={`${basePath}${imageSrc}`}
@@ -260,17 +309,29 @@ export default function Post({
               if (!videoSrc) return null;
 
               const caption = videoCaptions[videoSrc] || 'Video from the trip';
+              const currentMediaIndex = mediaCounter++;
+
+              const posterSrc = (videoThumbnails as Record<string, string>)[videoSrc];
 
               return (
                 <figure key={`video-${idx}`} className="my-8">
-                  <video
+                  <Lightbox
                     src={`${basePath}${videoSrc}`}
-                    controls
-                    className="w-full rounded-lg shadow-lg"
-                    preload="metadata"
+                    alt={caption}
+                    caption={caption}
+                    allMedia={allMedia}
+                    currentIndex={currentMediaIndex}
                   >
-                    Your browser does not support the video tag.
-                  </video>
+                    <video
+                      src={`${basePath}${videoSrc}`}
+                      poster={posterSrc ? `${basePath}${posterSrc}` : undefined}
+                      controls
+                      className="w-full rounded-lg shadow-lg"
+                      preload="metadata"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </Lightbox>
                   <figcaption className="text-sm text-stone-500 mt-2 text-center">
                     {caption}
                   </figcaption>
@@ -319,6 +380,13 @@ export default function Post({
 
             return null;
           })}
+
+          {/* Photo gallery hint - bottom of post */}
+          {hasMedia && allMedia.length > 1 && (
+            <p className="text-sm text-stone-400 italic mt-8 text-center">
+              Click any photo above to browse all media from this entry
+            </p>
+          )}
 
           {/* Comments from original blog */}
           <Comments comments={comments} />
