@@ -1,13 +1,15 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   // Enable static export for GitHub Pages
   output: 'export',
 
-  // Base path for GitHub Pages (repo name)
+  // Base path for GitHub Pages (repo name) - only in production
   // Must match the value in lib/config.ts
-  basePath: '/newfienova',
-  assetPrefix: '/newfienova/',
+  basePath: isProd ? '/newfienova' : '',
+  assetPrefix: isProd ? '/newfienova/' : '',
 
   // Configure images for static export
   images: {

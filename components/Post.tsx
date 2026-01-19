@@ -2,9 +2,20 @@
 
 import Image from 'next/image';
 import { useMemo } from 'react';
+import dynamic from 'next/dynamic';
 import PostMap from './PostMap';
 import Comments from './Comments';
 import { basePath } from '@/lib/config';
+
+// Dynamically import the embedded map component
+const EmbeddedMapComponent = dynamic(() => import('./EmbeddedMap'), {
+  ssr: false,
+  loading: () => (
+    <div className="bg-stone-100 rounded-lg flex items-center justify-center h-[400px]">
+      <p className="text-stone-400 text-sm">Loading map...</p>
+    </div>
+  )
+});
 
 interface ImageMatch {
   geotaggedFile: string;
@@ -32,6 +43,14 @@ interface EmbeddedMap {
   title: string;
 }
 
+interface VideoCaptions {
+  [videoPath: string]: string;
+}
+
+interface ImageCaptions {
+  [imagePath: string]: string;
+}
+
 interface PostProps {
   id: string;
   title: string;
@@ -41,15 +60,18 @@ interface PostProps {
   images: string[];
   heroImage?: string | null;
   videos?: string[];
+  videoCaptions?: VideoCaptions;
+  imageCaptions?: ImageCaptions;
   imageMatches?: ImageMatches;
   comments?: Comment[];
   embeddedMap?: EmbeddedMap;
 }
 
-// Content block can be text, image, or embedded map placeholder
+// Content block can be text, image, video, or embedded map placeholder
 type ContentBlock =
   | { type: 'text'; html: string; isH3: boolean }
   | { type: 'image'; imageIndex: number }
+  | { type: 'video'; videoIndex: number }
   | { type: 'embeddedMap' };
 
 export default function Post({
@@ -61,6 +83,8 @@ export default function Post({
   images,
   heroImage,
   videos = [],
+  videoCaptions = {},
+  imageCaptions = {},
   imageMatches = {},
   comments = [],
   embeddedMap,
@@ -72,9 +96,10 @@ export default function Post({
 
     // First, replace img tags with unique placeholders to track their positions
     let imageIndex = 0;
+    let videoIndex = 0;
     let withPlaceholders = content
-      // Remove object/embed tags (old Blogger video embeds)
-      .replace(/<object[^>]*>[\s\S]*?<\/object>/gi, hasVideosNow ? '' : '<p><em>[Video no longer available]</em></p>')
+      // Replace object/embed tags (old Blogger video embeds) with video placeholders
+      .replace(/<object[^>]*>[\s\S]*?<\/object>/gi, hasVideosNow ? (() => `<!--VIDEO_PLACEHOLDER_${videoIndex++}-->`) : (() => '<p><em>[Video no longer available]</em></p>'))
       .replace(/<embed[^>]*>/gi, '')
       // Replace iframe embeds with map placeholder if we have embeddedMap, otherwise remove
       .replace(/<iframe[^>]*>[\s\S]*?<\/iframe>/gi, hasEmbeddedMap ? '<!--EMBEDDED_MAP_PLACEHOLDER-->' : (hasVideosNow ? '' : '<p><em>[Embedded content]</em></p>'))
@@ -107,8 +132,8 @@ export default function Post({
       const trimmed = part.trim();
       if (!trimmed) continue;
 
-      // Check if this part contains any placeholders (images or map)
-      const allPlaceholderRegex = /<!--(IMG_PLACEHOLDER_(\d+)|EMBEDDED_MAP_PLACEHOLDER)-->/g;
+      // Check if this part contains any placeholders (images, videos, or map)
+      const allPlaceholderRegex = /<!--(IMG_PLACEHOLDER_(\d+)|VIDEO_PLACEHOLDER_(\d+)|EMBEDDED_MAP_PLACEHOLDER)-->/g;
       let lastIndex = 0;
       let match;
       let foundPlaceholder = false;
@@ -128,6 +153,8 @@ export default function Post({
         // Add the appropriate placeholder type
         if (match[1].startsWith('IMG_PLACEHOLDER_')) {
           blocks.push({ type: 'image', imageIndex: parseInt(match[2], 10) });
+        } else if (match[1].startsWith('VIDEO_PLACEHOLDER_')) {
+          blocks.push({ type: 'video', videoIndex: parseInt(match[3], 10) });
         } else if (match[1] === 'EMBEDDED_MAP_PLACEHOLDER') {
           blocks.push({ type: 'embeddedMap' });
         }
@@ -157,7 +184,7 @@ export default function Post({
 
     // Remove empty paragraphs that are just whitespace/br
     return blocks.filter(block => {
-      if (block.type === 'image' || block.type === 'embeddedMap') return true;
+      if (block.type === 'image' || block.type === 'video' || block.type === 'embeddedMap') return true;
       if (block.type === 'text') {
         const stripped = block.html.replace(/<br\s*\/?>/gi, '').replace(/&nbsp;/gi, '').trim();
         return stripped.length > 0;
@@ -187,6 +214,7 @@ export default function Post({
         <PostMap
           postId={id}
           postImages={images}
+          postVideos={videos}
           imageMatches={imageMatches}
         />
 
@@ -198,47 +226,59 @@ export default function Post({
               const imageSrc = contentImages[block.imageIndex];
               if (!imageSrc) return null;
 
+              const caption = imageCaptions[imageSrc];
+
               return (
                 <figure key={`img-${idx}`} className="my-8">
                   <Image
                     src={`${basePath}${imageSrc}`}
-                    alt={`Photo from ${title}`}
+                    alt={caption || `Photo from ${title}`}
                     width={1600}
                     height={1200}
                     quality={90}
                     className="w-full h-auto"
                   />
+                  {caption && (
+                    <figcaption className="text-sm text-stone-500 text-left">
+                      {caption}
+                    </figcaption>
+                  )}
+                </figure>
+              );
+            }
+
+            if (block.type === 'video') {
+              // Render video inline where it appears in content
+              const videoSrc = videos[block.videoIndex];
+              if (!videoSrc) return null;
+
+              const caption = videoCaptions[videoSrc] || 'Video from the trip';
+
+              return (
+                <figure key={`video-${idx}`} className="my-8">
+                  <video
+                    src={`${basePath}${videoSrc}`}
+                    controls
+                    className="w-full rounded-lg shadow-lg"
+                    preload="metadata"
+                  >
+                    Your browser does not support the video tag.
+                  </video>
+                  <figcaption className="text-sm text-stone-500 mt-2 text-center">
+                    {caption}
+                  </figcaption>
                 </figure>
               );
             }
 
             if (block.type === 'embeddedMap' && embeddedMap) {
-              // Render embedded map inline where the original iframe was
-              // Wrapper div with pointer-events-none prevents scroll hijacking until user clicks
-              // bbox format: left,bottom,right,top (west,south,east,north)
-              const lat = embeddedMap.center[0];
-              const lng = embeddedMap.center[1];
-              const latSpan = 0.3;
-              const lngSpan = 0.5;
-              const bbox = `${lng - lngSpan},${lat - latSpan},${lng + lngSpan},${lat + latSpan}`;
+              // Render embedded map using Leaflet for reliable zoom control
               return (
                 <div key={`map-${idx}`} className="my-8">
-                  <div
-                    className="relative group"
-                    style={{ pointerEvents: 'auto' }}
-                  >
-                    <div
-                      className="absolute inset-0 z-10 cursor-pointer group-focus-within:hidden"
-                      onClick={(e) => {
-                        // Remove the overlay on click to allow map interaction
-                        (e.currentTarget as HTMLElement).style.display = 'none';
-                      }}
-                    />
-                    <iframe
-                      src={`https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik`}
-                      width="100%"
-                      height="400"
-                      style={{ border: '1px solid #ccc', borderRadius: '8px' }}
+                  <div className="rounded-lg overflow-hidden shadow-md">
+                    <EmbeddedMapComponent
+                      center={embeddedMap.center}
+                      zoom={embeddedMap.zoom}
                       title={embeddedMap.title}
                     />
                   </div>
@@ -272,27 +312,6 @@ export default function Post({
 
             return null;
           })}
-
-          {/* Videos section */}
-          {videos.length > 0 && (
-            <div className="mt-8 space-y-6">
-              {videos.map((video, idx) => (
-                <figure key={idx} className="my-8">
-                  <video
-                    src={`${basePath}${video}`}
-                    controls
-                    className="w-full rounded-lg shadow-lg"
-                    preload="metadata"
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                  <figcaption className="text-sm text-stone-500 mt-2 text-center">
-                    Video from the trip
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          )}
 
           {/* Comments from original blog */}
           <Comments comments={comments} />

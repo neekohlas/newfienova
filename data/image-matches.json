@@ -1587,6 +1587,26 @@
       "latitude": 49.27475277777778,
       "longitude": -57.50543888888889,
       "date": "2008:08:13 09:01:04"
+    },
+    "/videos/godwilling1.mov": {
+      "geotaggedFile": null,
+      "geotaggedPath": null,
+      "similarity": 100,
+      "path": "/videos/godwilling1.mov",
+      "latitude": 45.96199668164194,
+      "longitude": -60.8060435790315,
+      "date": "2008:08:02 18:00:00",
+      "isVideo": true
+    },
+    "/videos/godwilling2.mov": {
+      "geotaggedFile": null,
+      "geotaggedPath": null,
+      "similarity": 100,
+      "path": "/videos/godwilling2.mov",
+      "latitude": 45.96199668164194,
+      "longitude": -60.8060435790315,
+      "date": "2008:08:02 18:05:00",
+      "isVideo": true
     }
   }
 }

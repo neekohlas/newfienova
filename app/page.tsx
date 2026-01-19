@@ -7,6 +7,7 @@ import RouteMap from '@/components/RouteMap';
 import Navigation from '@/components/Navigation';
 import locationData from '@/data/locations.json';
 import imageMatchesData from '@/data/image-matches.json';
+import imageCaptionsData from '@/data/image-captions.json';
 import fs from 'fs/promises';
 import path from 'path';
 
@@ -216,19 +217,6 @@ The barrens—areas of low shrubs, lichens, mosses, and exposed rock—cover muc
 The coastline, stretching over 17,500 kilometers, is one of the longest and most convoluted in the world. Countless bays, inlets, and coves indent the shore, creating the isolated harbors where outport communities took root. This dramatic meeting of land and sea defines the Newfoundland experience for most visitors.`,
     },
   ],
-  '6743829052231552924': [
-    {
-      title: 'The Burgeo Road and Southwestern Newfoundland',
-      content:
-        `Southwestern Newfoundland remains one of the most isolated regions on the island, a rugged territory where the road ends and the only access to several communities is by ferry. The Burgeo Road (Route 480) penetrates this wilderness, offering cyclists a glimpse into a Newfoundland that progress has largely bypassed.
-
-Burgeo itself, population around 1,300, sits at the end of 150 kilometers of winding road through some of the loneliest country in eastern North America. The town serves as a regional center for the southwestern coast, providing ferry access to the isolated communities of Ramea and Grey River. Beyond the road's end, several communities remain accessible only by sea.
-
-The region's isolation is both its challenge and its preservation. While other parts of Newfoundland have been transformed by roads and development, southwestern communities retain a character that has largely vanished elsewhere. Traditional skills survive here by necessity. The relationship with the sea remains immediate and essential.
-
-For cyclists, the Burgeo Road presents significant challenges. Services are virtually nonexistent between the Trans-Canada Highway and Burgeo itself. The terrain is demanding, with significant climbs and often fierce headwinds off the Gulf of St. Lawrence. Weather can deteriorate rapidly. Yet those who make the journey find communities unchanged by tourism, landscapes of fierce beauty, and a hospitality that reflects genuine surprise at visitors who arrive on two wheels.`,
-    },
-  ],
   '3387785513543904515': [
     {
       title: 'Bicycle Touring Cuisine: Eating to Ride',
@@ -244,15 +232,15 @@ The cooking ritual becomes meaningful in ways that seem surprising afterward. Af
   ],
   '6025855796723337031': [
     {
-      title: 'The Newfoundland Interior: The Great Lonely Land',
+      title: 'The Burgeo Road and Southwestern Newfoundland',
       content:
-        `Crossing Newfoundland's interior is an exercise in understanding scale and solitude. Between the communities of the west coast and those of the east lies a vast, sparsely populated territory that early travelers called "the great lonely land"—and the description remains apt.
+        `Southwestern Newfoundland remains one of the most isolated regions on the island, a rugged territory where the road ends and the only access to several communities is by ferry. The Burgeo Road (Route 480) penetrates this wilderness, offering cyclists a glimpse into a Newfoundland that progress has largely bypassed.
 
-The Trans-Canada Highway traverses this interior in a 400-kilometer stretch between Deer Lake and Clarenville, passing through tiny communities separated by huge distances. Services are few: gas stations appear at intervals of 50-100 kilometers, and many lack even basic amenities. For cyclists, careful planning is essential. Running out of food or water in this stretch could become a serious situation.
+Burgeo itself, population around 1,300, sits at the end of 150 kilometers of winding road through some of the loneliest country in eastern North America. The town serves as a regional center for the southwestern coast, providing ferry access to the isolated communities of Ramea and Grey River. Beyond the road's end, several communities remain accessible only by sea.
 
-The landscape is boreal forest—an endless expanse of stunted black spruce that can begin to feel oppressive after hours of riding. The trees crowd close to the roadway, limiting views and creating a tunnel-like effect. Lakes appear occasionally, offering welcome variety, but the dominant impression is of sameness stretching to every horizon.
+The region's isolation is both its challenge and its preservation. While other parts of Newfoundland have been transformed by roads and development, southwestern communities retain a character that has largely vanished elsewhere. Traditional skills survive here by necessity. The relationship with the sea remains immediate and essential.
 
-Yet this emptiness has its own austere beauty. The forest supports one of North America's largest caribou herds, and patient observers may spot animals at dawn or dusk. Moose are common enough to constitute a driving hazard. The silence, once you stop and let the traffic pass, is profound. In an increasingly crowded world, such emptiness has become rare and, to some, precious.`,
+For cyclists, the Burgeo Road presents significant challenges. Services are virtually nonexistent between the Trans-Canada Highway and Burgeo itself. The terrain is demanding, with significant climbs and often fierce headwinds off the Gulf of St. Lawrence. Weather can deteriorate rapidly. Yet those who make the journey find communities unchanged by tourism, landscapes of fierce beauty, and a hospitality that reflects genuine surprise at visitors who arrive on two wheels.`,
     },
   ],
   '6791033527134303750': [
@@ -437,6 +425,7 @@ export default async function Home() {
                   images={post.images}
                   heroImage={post.heroImage}
                   videos={post.videos}
+                  imageCaptions={imageCaptionsData as any}
                   imageMatches={imageMatchesData.matches as any}
                   comments={post.comments}
                   embeddedMap={post.embeddedMap}

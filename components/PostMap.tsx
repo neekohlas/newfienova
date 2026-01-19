@@ -21,12 +21,13 @@ interface ImageMatches {
 interface PostMapProps {
   postId: string;
   postImages: string[];
+  postVideos?: string[];
   imageMatches: ImageMatches;
 }
 
 interface MapContentProps {
   postId: string;
-  matchedImages: { imagePath: string; match: ImageMatch }[];
+  matchedImages: { imagePath: string; match: ImageMatch; isVideo?: boolean }[];
   bounds: {
     center: { lat: number; lng: number };
     north: number;
@@ -109,31 +110,75 @@ function MapContentComponent({
         />
       )}
 
-      {/* Photo thumbnail markers */}
-      {matchedImages.map(({ imagePath, match }, idx) => {
-        const thumbnailIcon = L.divIcon({
-          className: 'thumbnail-marker',
-          html: `
-            <div style="
-              width: 44px;
-              height: 44px;
-              border-radius: 6px;
-              border: 3px solid #1c1917;
-              overflow: hidden;
-              box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-              background: white;
-            ">
-              <img
-                src="${basePath}${imagePath}"
-                alt="Photo"
-                style="width: 100%; height: 100%; object-fit: cover;"
-              />
-            </div>
-          `,
-          iconSize: [44, 44],
-          iconAnchor: [22, 22],
-          popupAnchor: [0, -22],
-        });
+      {/* Photo and video thumbnail markers */}
+      {matchedImages.map(({ imagePath, match, isVideo }, idx) => {
+        const thumbnailIcon = isVideo
+          ? L.divIcon({
+              className: 'video-marker',
+              html: `
+                <div style="
+                  width: 44px;
+                  height: 44px;
+                  border-radius: 6px;
+                  border: 3px solid #1c1917;
+                  overflow: hidden;
+                  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+                  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  position: relative;
+                ">
+                  <div style="
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    right: 3px;
+                    height: 4px;
+                    background: repeating-linear-gradient(90deg, #000 0px, #000 3px, transparent 3px, transparent 6px);
+                    opacity: 0.3;
+                  "></div>
+                  <div style="
+                    position: absolute;
+                    bottom: 3px;
+                    left: 3px;
+                    right: 3px;
+                    height: 4px;
+                    background: repeating-linear-gradient(90deg, #000 0px, #000 3px, transparent 3px, transparent 6px);
+                    opacity: 0.3;
+                  "></div>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+              `,
+              iconSize: [44, 44],
+              iconAnchor: [22, 22],
+              popupAnchor: [0, -22],
+            })
+          : L.divIcon({
+              className: 'thumbnail-marker',
+              html: `
+                <div style="
+                  width: 44px;
+                  height: 44px;
+                  border-radius: 6px;
+                  border: 3px solid #1c1917;
+                  overflow: hidden;
+                  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+                  background: white;
+                ">
+                  <img
+                    src="${basePath}${imagePath}"
+                    alt="Photo"
+                    style="width: 100%; height: 100%; object-fit: cover;"
+                  />
+                </div>
+              `,
+              iconSize: [44, 44],
+              iconAnchor: [22, 22],
+              popupAnchor: [0, -22],
+            });
 
         return (
           <Marker
@@ -143,11 +188,30 @@ function MapContentComponent({
           >
             <Popup>
               <div className="text-sm">
-                <img
-                  src={`${basePath}${imagePath}`}
-                  alt="Photo from post"
-                  className="max-w-[220px] rounded mb-2"
-                />
+                {isVideo ? (
+                  <>
+                    <div style={{
+                      background: 'linear-gradient(135deg, #dc2626 0%, #991b1b 100%)',
+                      borderRadius: '8px',
+                      padding: '16px 24px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginBottom: '8px'
+                    }}>
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                    <p className="text-stone-700 text-xs font-medium mb-1">🎬 Video from the trip</p>
+                  </>
+                ) : (
+                  <img
+                    src={`${basePath}${imagePath}`}
+                    alt="Photo from post"
+                    className="max-w-[220px] rounded mb-2"
+                  />
+                )}
                 {match.date && (
                   <p className="text-stone-500 text-xs">
                     {match.date.replace(/:/g, '-').replace(' ', ' at ')}
@@ -172,7 +236,7 @@ const MapContent = dynamic(() => Promise.resolve(MapContentComponent), {
   ),
 });
 
-export default function PostMap({ postId, postImages, imageMatches }: PostMapProps) {
+export default function PostMap({ postId, postImages, postVideos = [], imageMatches }: PostMapProps) {
   const [isMounted, setIsMounted] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -180,15 +244,24 @@ export default function PostMap({ postId, postImages, imageMatches }: PostMapPro
     setIsMounted(true);
   }, []);
 
-  // Find matched images for this post
+  // Find matched images and videos for this post
   const matchedImages = useMemo(() => {
-    const matched: { imagePath: string; match: ImageMatch }[] = [];
+    const matched: { imagePath: string; match: ImageMatch; isVideo?: boolean }[] = [];
 
+    // Add matched images
     for (const img of postImages) {
       const match = imageMatches[img];
       // Only include matches that have valid coordinates
       if (match && typeof match.latitude === 'number' && typeof match.longitude === 'number') {
-        matched.push({ imagePath: img, match });
+        matched.push({ imagePath: img, match, isVideo: false });
+      }
+    }
+
+    // Add matched videos
+    for (const video of postVideos) {
+      const match = imageMatches[video];
+      if (match && typeof match.latitude === 'number' && typeof match.longitude === 'number') {
+        matched.push({ imagePath: video, match, isVideo: true });
       }
     }
 
@@ -199,7 +272,7 @@ export default function PostMap({ postId, postImages, imageMatches }: PostMapPro
       return dateA.localeCompare(dateB);
     });
     return matched;
-  }, [postImages, imageMatches]);
+  }, [postImages, postVideos, imageMatches]);
 
   // Calculate bounds
   const bounds = useMemo(() => {
