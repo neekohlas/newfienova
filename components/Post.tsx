@@ -7,6 +7,7 @@ import PostMap from './PostMap';
 import Comments from './Comments';
 import Lightbox, { MediaItem } from './Lightbox';
 import { basePath } from '@/lib/config';
+import { getOptimizedImagePath } from '@/lib/image-utils';
 import videoThumbnails from '@/data/video-thumbnails.json';
 
 // Dynamically import the embedded map component
@@ -311,11 +312,11 @@ export default function Post({
                     currentIndex={currentMediaIndex}
                   >
                     <Image
-                      src={`${basePath}${imageSrc}`}
+                      src={getOptimizedImagePath(imageSrc)}
                       alt={caption || `Photo from ${title}`}
-                      width={1600}
-                      height={1200}
-                      quality={90}
+                      width={800}
+                      height={600}
+                      quality={85}
                       className="w-full h-auto"
                     />
                   </Lightbox>
