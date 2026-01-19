@@ -22,7 +22,7 @@ const CONFIG = {
   // Inline image settings (for display in blog posts)
   inline: {
     width: 800,        // Max width in pixels
-    quality: 80,       // JPEG quality (1-100)
+    quality: 60,       // JPEG quality (1-100) - lower for faster mobile loading
   },
 
   // Supported image extensions

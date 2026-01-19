@@ -316,7 +316,7 @@ export default function Post({
                       alt={caption || `Photo from ${title}`}
                       width={800}
                       height={600}
-                      quality={85}
+                      loading="lazy"
                       className="w-full h-auto"
                     />
                   </Lightbox>
