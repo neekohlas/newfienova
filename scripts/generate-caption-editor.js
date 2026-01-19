@@ -10,6 +10,13 @@ if (fs.existsSync(imageCaptionsPath)) {
   existingImageCaptions = JSON.parse(fs.readFileSync(imageCaptionsPath, 'utf-8'));
 }
 
+// Load video thumbnails
+let videoThumbnails = {};
+const videoThumbnailsPath = path.join(__dirname, '../data/video-thumbnails.json');
+if (fs.existsSync(videoThumbnailsPath)) {
+  videoThumbnails = JSON.parse(fs.readFileSync(videoThumbnailsPath, 'utf-8'));
+}
+
 // Extract existing video captions from posts
 let existingVideoCaptions = {};
 posts.posts.forEach(post => {
@@ -57,6 +64,31 @@ const html = `<!DOCTYPE html>
     .video-placeholder:hover { background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); }
     .video-placeholder svg { width: 60px; height: 60px; margin-bottom: 10px; }
     .video-placeholder span { font-size: 14px; opacity: 0.8; }
+    .video-thumbnail-container {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      cursor: pointer;
+    }
+    .video-thumbnail {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .video-play-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.3);
+      transition: background 0.2s;
+    }
+    .video-thumbnail-container:hover .video-play-overlay { background: rgba(0, 0, 0, 0.5); }
+    .video-play-overlay svg { width: 60px; height: 60px; color: white; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
     .caption-area { padding: 12px; }
     .position { font-weight: bold; color: #1c1917; font-size: 14px; margin-bottom: 8px; }
     .position .badge {
@@ -173,6 +205,7 @@ const html = `<!DOCTYPE html>
     const postsData = ${JSON.stringify(posts)};
     const existingImageCaptions = ${JSON.stringify(existingImageCaptions)};
     const existingVideoCaptions = ${JSON.stringify(existingVideoCaptions)};
+    const videoThumbnails = ${JSON.stringify(videoThumbnails)};
 
     // Caption storage (separate for images and videos)
     const imageCaptions = {};
@@ -271,16 +304,29 @@ const html = `<!DOCTYPE html>
       const caption = videoCaptions[videoPath] || '';
       const hasCaption = !!caption;
       const filename = getFilename(videoPath);
+      const thumbnailPath = videoThumbnails[videoPath];
 
-      return \`
-        <div class="media-card is-video \${hasCaption ? 'has-caption' : ''}" data-media="\${videoPath}" data-captioned="\${hasCaption}" data-type="video">
-          <div class="video-placeholder" onclick="window.open('\${videoPath}', '_blank')">
+      const mediaContent = thumbnailPath
+        ? \`<div class="video-thumbnail-container" onclick="window.open('\${videoPath}', '_blank')">
+            <img src="\${thumbnailPath}" alt="Video \${index + 1}" class="video-thumbnail">
+            <div class="video-play-overlay">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+          </div>\`
+        : \`<div class="video-placeholder" onclick="window.open('\${videoPath}', '_blank')">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <span>Click to play video</span>
-          </div>
+          </div>\`;
+
+      return \`
+        <div class="media-card is-video \${hasCaption ? 'has-caption' : ''}" data-media="\${videoPath}" data-captioned="\${hasCaption}" data-type="video">
+          \${mediaContent}
           <div class="caption-area">
             <div class="position">Media \${overallIndex + 1} <span class="badge badge-video">Video</span></div>
             <div class="filename">\${filename}</div>

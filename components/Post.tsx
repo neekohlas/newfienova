@@ -67,6 +67,9 @@ interface PostProps {
   imageMatches?: ImageMatches;
   comments?: Comment[];
   embeddedMap?: EmbeddedMap;
+  // For cross-post navigation
+  globalMedia?: MediaItem[];
+  globalMediaOffset?: number;
 }
 
 // Content block can be text, image, video, or embedded map placeholder
@@ -90,6 +93,8 @@ export default function Post({
   imageMatches = {},
   comments = [],
   embeddedMap,
+  globalMedia,
+  globalMediaOffset = 0,
 }: PostProps) {
   // Process content to extract text blocks and image positions
   const contentBlocks = useMemo((): ContentBlock[] => {
@@ -228,14 +233,27 @@ export default function Post({
             caption,
           });
         }
+      } else if (block.type === 'embeddedMap' && embeddedMap) {
+        mediaItems.push({
+          type: 'map',
+          src: '',
+          alt: embeddedMap.title || 'Route map',
+          caption: embeddedMap.title,
+          mapCenter: embeddedMap.center,
+          mapZoom: embeddedMap.zoom,
+        });
       }
     }
 
     return mediaItems;
-  }, [contentBlocks, contentImages, videos, imageCaptions, videoCaptions, title]);
+  }, [contentBlocks, contentImages, videos, imageCaptions, videoCaptions, title, embeddedMap]);
 
   // Track which media index we're at as we render
   let mediaCounter = 0;
+
+  // Use global media array if available, otherwise use local
+  const lightboxMedia = globalMedia || allMedia;
+  const mediaOffset = globalMedia ? globalMediaOffset : 0;
 
   const hasMedia = allMedia.length > 0;
 
@@ -274,7 +292,7 @@ export default function Post({
               if (!imageSrc) return null;
 
               const caption = imageCaptions[imageSrc];
-              const currentMediaIndex = mediaCounter++;
+              const currentMediaIndex = mediaOffset + mediaCounter++;
 
               return (
                 <figure key={`img-${idx}`} className="my-8">
@@ -282,7 +300,7 @@ export default function Post({
                     src={`${basePath}${imageSrc}`}
                     alt={caption || `Photo from ${title}`}
                     caption={caption}
-                    allMedia={allMedia}
+                    allMedia={lightboxMedia}
                     currentIndex={currentMediaIndex}
                   >
                     <Image
@@ -309,7 +327,7 @@ export default function Post({
               if (!videoSrc) return null;
 
               const caption = videoCaptions[videoSrc] || 'Video from the trip';
-              const currentMediaIndex = mediaCounter++;
+              const currentMediaIndex = mediaOffset + mediaCounter++;
 
               const posterSrc = (videoThumbnails as Record<string, string>)[videoSrc];
 
@@ -319,7 +337,7 @@ export default function Post({
                     src={`${basePath}${videoSrc}`}
                     alt={caption}
                     caption={caption}
-                    allMedia={allMedia}
+                    allMedia={lightboxMedia}
                     currentIndex={currentMediaIndex}
                   >
                     <video
@@ -341,15 +359,24 @@ export default function Post({
 
             if (block.type === 'embeddedMap' && embeddedMap) {
               // Render embedded map using Leaflet for reliable zoom control
+              const currentMediaIndex = mediaOffset + mediaCounter++;
               return (
                 <div key={`map-${idx}`} className="my-8">
-                  <div className="rounded-lg overflow-hidden shadow-md">
-                    <EmbeddedMapComponent
-                      center={embeddedMap.center}
-                      zoom={embeddedMap.zoom}
-                      title={embeddedMap.title}
-                    />
-                  </div>
+                  <Lightbox
+                    src=""
+                    alt={embeddedMap.title || 'Route map'}
+                    caption={embeddedMap.title}
+                    allMedia={lightboxMedia}
+                    currentIndex={currentMediaIndex}
+                  >
+                    <div className="rounded-lg overflow-hidden shadow-md cursor-zoom-in">
+                      <EmbeddedMapComponent
+                        center={embeddedMap.center}
+                        zoom={embeddedMap.zoom}
+                        title={embeddedMap.title}
+                      />
+                    </div>
+                  </Lightbox>
                   <p className="text-sm text-stone-500 mt-2 text-center">Where might we be headed next? (Hint: follow the dotted lines.)</p>
                 </div>
               );

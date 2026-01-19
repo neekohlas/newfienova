@@ -4,10 +4,13 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 export interface MediaItem {
-  type: 'image' | 'video';
+  type: 'image' | 'video' | 'map';
   src: string;
   alt: string;
   caption?: string;
+  // For maps
+  mapCenter?: [number, number];
+  mapZoom?: number;
 }
 
 interface LightboxProps {
@@ -148,74 +151,83 @@ export default function Lightbox({
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95"
           onClick={closeLightbox}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {/* Close button */}
+          {/* Close button - top right */}
           <button
             onClick={closeLightbox}
-            className="absolute top-4 right-4 text-white/80 hover:text-white z-10 p-2"
+            className="absolute top-3 right-3 text-white/50 hover:text-white z-20 p-2 transition-colors"
             aria-label="Close"
           >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
-          {/* Counter */}
+          {/* Counter - top left */}
           {hasNavigation && (
-            <div className="absolute top-4 left-4 text-white/60 text-sm z-10">
+            <div className="absolute top-4 left-4 text-white/50 text-sm z-20">
               {activeIndex + 1} / {allMedia.length}
             </div>
           )}
 
-          {/* Previous button */}
-          {hasNavigation && (
-            <button
-              onClick={(e) => { e.stopPropagation(); goToPrev(); }}
-              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-white z-10 p-2 md:p-3"
-              aria-label="Previous"
-            >
-              <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-          )}
-
-          {/* Next button */}
-          {hasNavigation && (
-            <button
-              onClick={(e) => { e.stopPropagation(); goToNext(); }}
-              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 text-white/60 hover:text-white z-10 p-2 md:p-3"
-              aria-label="Next"
-            >
-              <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          )}
-
-          {/* Media container */}
+          {/* Media container - full size */}
           <div
             ref={containerRef}
-            className="relative max-w-[95vw] max-h-[90vh] flex flex-col items-center px-12 md:px-16"
+            className="relative w-full h-full flex flex-col items-center justify-center"
             onClick={(e) => e.stopPropagation()}
             style={getTransformStyle()}
           >
-            <div className="relative w-full h-full flex items-center justify-center">
+            {/* Previous button - overlaid on left edge */}
+            {hasNavigation && (
+              <button
+                onClick={(e) => { e.stopPropagation(); goToPrev(); }}
+                className="absolute left-0 top-0 bottom-0 w-16 md:w-24 flex items-center justify-start pl-2 md:pl-4 text-white/30 hover:text-white/80 z-10 transition-colors"
+                aria-label="Previous"
+              >
+                <svg className="w-8 h-8 md:w-10 md:h-10 drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+            )}
+
+            {/* Next button - overlaid on right edge */}
+            {hasNavigation && (
+              <button
+                onClick={(e) => { e.stopPropagation(); goToNext(); }}
+                className="absolute right-0 top-0 bottom-0 w-16 md:w-24 flex items-center justify-end pr-2 md:pr-4 text-white/30 hover:text-white/80 z-10 transition-colors"
+                aria-label="Next"
+              >
+                <svg className="w-8 h-8 md:w-10 md:h-10 drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            )}
+
+            {/* The actual media */}
+            <div className="relative max-w-[100vw] max-h-[85vh] md:max-h-[90vh] flex items-center justify-center px-2 md:px-4">
               {currentMedia.type === 'video' ? (
                 <video
                   key={currentMedia.src}
                   src={currentMedia.src}
                   controls
                   autoPlay
-                  className="max-w-full max-h-[85vh] w-auto h-auto"
+                  className="max-w-full max-h-[80vh] md:max-h-[85vh] w-auto h-auto"
                 >
                   Your browser does not support the video tag.
                 </video>
+              ) : currentMedia.type === 'map' ? (
+                <div className="w-[90vw] h-[70vh] md:w-[80vw] md:h-[80vh] bg-stone-800 rounded-lg flex items-center justify-center">
+                  <iframe
+                    src={`https://www.openstreetmap.org/export/embed.html?bbox=${(currentMedia.mapCenter?.[1] || 0) - 2}%2C${(currentMedia.mapCenter?.[0] || 0) - 1}%2C${(currentMedia.mapCenter?.[1] || 0) + 2}%2C${(currentMedia.mapCenter?.[0] || 0) + 1}&layer=mapnik`}
+                    className="w-full h-full rounded-lg"
+                    style={{ border: 0 }}
+                  />
+                </div>
               ) : (
                 <Image
                   key={currentMedia.src}
@@ -224,20 +236,22 @@ export default function Lightbox({
                   width={1920}
                   height={1440}
                   quality={95}
-                  className="max-w-full max-h-[85vh] w-auto h-auto object-contain"
+                  className="max-w-full max-h-[80vh] md:max-h-[85vh] w-auto h-auto object-contain"
                   priority
                 />
               )}
             </div>
+
+            {/* Caption below media */}
             {currentMedia.caption && (
-              <p className="text-white/80 text-sm mt-3 text-center max-w-2xl">
+              <p className="text-white/70 text-sm mt-3 text-center max-w-2xl px-4">
                 {currentMedia.caption}
               </p>
             )}
 
             {/* Navigation hint on mobile */}
             {hasNavigation && (
-              <p className="text-white/40 text-xs mt-2 text-center md:hidden">
+              <p className="text-white/30 text-xs mt-2 text-center md:hidden">
                 Swipe to navigate • Swipe down to close
               </p>
             )}

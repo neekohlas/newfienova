@@ -8,6 +8,7 @@ import Navigation from '@/components/Navigation';
 import locationData from '@/data/locations.json';
 import imageMatchesData from '@/data/image-matches.json';
 import imageCaptionsData from '@/data/image-captions.json';
+import { buildGlobalMediaArray, MediaItem } from '@/lib/media-utils';
 import fs from 'fs/promises';
 import path from 'path';
 
@@ -359,6 +360,21 @@ export default async function Home() {
     shortDate: p.shortDate,
   }));
 
+  // Collect all video captions from posts
+  const allVideoCaptions: { [key: string]: string } = {};
+  posts.forEach((post: { videoCaptions?: { [key: string]: string } }) => {
+    if (post.videoCaptions) {
+      Object.assign(allVideoCaptions, post.videoCaptions);
+    }
+  });
+
+  // Build global media array for cross-post lightbox navigation
+  const { globalMedia, offsets: mediaOffsets } = buildGlobalMediaArray(
+    posts,
+    imageCaptionsData as { [key: string]: string },
+    allVideoCaptions
+  );
+
   return (
     <main>
       <ProgressBar />
@@ -429,6 +445,8 @@ export default async function Home() {
                   imageMatches={imageMatchesData.matches as any}
                   comments={post.comments}
                   embeddedMap={post.embeddedMap}
+                  globalMedia={globalMedia}
+                  globalMediaOffset={mediaOffsets.get(post.id) || 0}
                 />
 
                 {/* Insert context notes if available for this post */}
