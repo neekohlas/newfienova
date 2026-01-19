@@ -3,6 +3,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import { basePath } from '@/lib/config';
+import { getOptimizedImagePath } from '@/lib/image-utils';
 
 interface ImageMatch {
   geotaggedFile: string;
@@ -169,9 +170,10 @@ function MapContentComponent({
                   background: white;
                 ">
                   <img
-                    src="${basePath}${imagePath}"
+                    src="${getOptimizedImagePath(imagePath)}"
                     alt="Photo"
                     style="width: 100%; height: 100%; object-fit: cover;"
+                    loading="lazy"
                   />
                 </div>
               `,
@@ -207,9 +209,10 @@ function MapContentComponent({
                   </>
                 ) : (
                   <img
-                    src={`${basePath}${imagePath}`}
+                    src={getOptimizedImagePath(imagePath)}
                     alt="Photo from post"
                     className="max-w-[220px] rounded mb-2"
+                    loading="lazy"
                   />
                 )}
                 {match.date && (
