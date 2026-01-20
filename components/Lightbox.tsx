@@ -11,6 +11,8 @@ export interface MediaItem {
   caption?: string;
   // Original path without basePath, for image optimization transforms
   originalPath?: string;
+  // For videos - poster/thumbnail image
+  poster?: string;
   // For maps
   mapCenter?: [number, number];
   mapZoom?: number;
@@ -267,7 +269,9 @@ export default function Lightbox({
                 <video
                   key={currentMedia.src}
                   src={currentMedia.src}
+                  poster={currentMedia.poster}
                   controls
+                  preload="metadata"
                   className="max-w-full max-h-[80vh] md:max-h-[85vh] w-auto h-auto"
                 >
                   Your browser does not support the video tag.

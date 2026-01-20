@@ -1,4 +1,5 @@
 import { basePath } from '@/lib/config';
+import videoThumbnails from '@/data/video-thumbnails.json';
 
 export interface MediaItem {
   type: 'image' | 'video' | 'map' | 'postHeader';
@@ -7,6 +8,8 @@ export interface MediaItem {
   caption?: string;
   // Original path without basePath, for image optimization transforms
   originalPath?: string;
+  // For videos - poster/thumbnail image
+  poster?: string;
   mapCenter?: [number, number];
   mapZoom?: number;
   // For postHeader type
@@ -100,12 +103,14 @@ export function extractMediaFromPost(
         const videoSrc = videos[idx];
         if (videoSrc) {
           const caption = videoCaptions[videoSrc] || 'Video from the trip';
+          const posterSrc = (videoThumbnails as Record<string, string>)[videoSrc];
           mediaItems.push({
             type: 'video',
             src: `${basePath}${videoSrc}`,
             originalPath: videoSrc,
             alt: caption,
             caption,
+            poster: posterSrc ? `${basePath}${posterSrc}` : undefined,
           });
         }
       } else if (match[1] === 'EMBEDDED_MAP_PLACEHOLDER' && post.embeddedMap) {

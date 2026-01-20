@@ -234,12 +234,14 @@ export default function Post({
         const videoSrc = videos[block.videoIndex];
         if (videoSrc) {
           const caption = videoCaptions[videoSrc] || 'Video from the trip';
+          const posterSrc = (videoThumbnails as Record<string, string>)[videoSrc];
           mediaItems.push({
             type: 'video',
             src: `${basePath}${videoSrc}`,
             originalPath: videoSrc,
             alt: caption,
             caption,
+            poster: posterSrc ? `${basePath}${posterSrc}` : undefined,
           });
         }
       } else if (block.type === 'embeddedMap' && embeddedMap) {
