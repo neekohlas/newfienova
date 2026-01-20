@@ -37,15 +37,90 @@ export default function Navigation({ posts }: NavigationProps) {
       }
     };
 
+    // Handle initial hash navigation on page load
+    const handleInitialHash = () => {
+      const hash = window.location.hash;
+      if (hash && hash.startsWith('#post-')) {
+        const postId = hash.replace('#post-', '');
+        // Wait for initial render
+        setTimeout(() => {
+          const titleElement = document.getElementById(`title-${postId}`);
+          if (titleElement) {
+            const headerOffset = 80;
+            const elementPosition = titleElement.getBoundingClientRect().top;
+            const targetPosition = elementPosition + window.scrollY - headerOffset;
+            const scrollDistance = Math.abs(targetPosition);
+
+            // Smooth scroll for the visual journey
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+
+            // Correct position after scroll completes
+            if (scrollDistance > 1500) {
+              const estimatedDuration = Math.min(Math.max(scrollDistance / 3, 500), 1500);
+              setTimeout(() => {
+                const newElementPosition = titleElement.getBoundingClientRect().top;
+                const adjustment = newElementPosition - headerOffset;
+                if (Math.abs(adjustment) > 50) {
+                  window.scrollTo({
+                    top: window.scrollY + adjustment,
+                    behavior: 'smooth'
+                  });
+                }
+              }, estimatedDuration + 100);
+            }
+          }
+        }, 300);
+      }
+    };
+
+    handleInitialHash();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToPost = (postId: string) => {
+    setIsMenuOpen(false);
+
+    // Update the URL hash
+    window.history.pushState(null, '', `#post-${postId}`);
+
     const titleElement = document.getElementById(`title-${postId}`);
-    if (titleElement) {
-      titleElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setIsMenuOpen(false);
+    if (!titleElement) return;
+
+    const headerOffset = 80;
+    const elementPosition = titleElement.getBoundingClientRect().top;
+    const currentScroll = window.scrollY;
+    const targetPosition = elementPosition + currentScroll - headerOffset;
+    const scrollDistance = Math.abs(targetPosition - currentScroll);
+
+    // Start smooth scroll for the visual journey
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+
+    // For long scrolls, correct the position after scroll completes
+    // (lazy-loaded images may have shifted the layout)
+    if (scrollDistance > 1500) {
+      // Estimate scroll duration based on distance (roughly 1ms per 3px, capped)
+      const estimatedDuration = Math.min(Math.max(scrollDistance / 3, 500), 1500);
+
+      setTimeout(() => {
+        // Recalculate and snap to correct position
+        const newElementPosition = titleElement.getBoundingClientRect().top;
+        const adjustment = newElementPosition - headerOffset;
+
+        // Only adjust if we're off by more than 50px
+        if (Math.abs(adjustment) > 50) {
+          window.scrollTo({
+            top: window.scrollY + adjustment,
+            behavior: 'smooth'
+          });
+        }
+      }, estimatedDuration + 100);
     }
   };
 

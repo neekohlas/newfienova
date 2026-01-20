@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState, useEffect, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 import PostMap from './PostMap';
 import Comments from './Comments';
@@ -99,9 +99,31 @@ export default function Post({
 }: PostProps) {
   // Track if we're mounted on client to avoid hydration mismatches with complex HTML
   const [isMounted, setIsMounted] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
+
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  // Copy post link to clipboard
+  const copyPostLink = useCallback(async () => {
+    const url = `${window.location.origin}${window.location.pathname}#post-${id}`;
+    try {
+      await navigator.clipboard.writeText(url);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    } catch (err) {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = url;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    }
+  }, [id]);
 
   // Process content to extract text blocks and image positions
   const contentBlocks = useMemo((): ContentBlock[] => {
@@ -276,9 +298,32 @@ export default function Post({
         <p className="byline text-stone-500 mb-3">{formattedDate}</p>
 
         {/* Title with anchor for navigation */}
-        <h2 id={`title-${id}`} className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight scroll-mt-24">
+        <h2 id={`title-${id}`} className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight scroll-mt-24">
           {title}
         </h2>
+
+        {/* Copy link button */}
+        <button
+          onClick={copyPostLink}
+          className="inline-flex items-center gap-1.5 text-sm text-stone-400 hover:text-stone-600 transition-colors mb-8"
+          aria-label="Copy link to this entry"
+        >
+          {linkCopied ? (
+            <>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Link copied!</span>
+            </>
+          ) : (
+            <>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+              </svg>
+              <span>Copy link to this entry</span>
+            </>
+          )}
+        </button>
 
         {/* Map showing photo locations for this entry - at top */}
         <PostMap
