@@ -47,7 +47,10 @@ export default function Lightbox({
   const [touchDelta, setTouchDelta] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const hasNavigation = allMedia.length > 1;
   const currentMedia = hasNavigation ? allMedia[activeIndex] : { type: 'image' as const, src, alt, caption };
@@ -57,6 +60,7 @@ export default function Lightbox({
     const baseUrl = typeof window !== 'undefined'
       ? `${window.location.origin}${window.location.pathname}`
       : '';
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : baseUrl;
 
     if (currentMedia.type === 'postHeader') {
       return {
@@ -66,11 +70,11 @@ export default function Lightbox({
       };
     }
 
-    // For images/videos, link to the post if we have a postId from surrounding context
-    // Otherwise just share the media URL directly
-    const mediaDescription = currentMedia.caption || currentMedia.alt || 'Photo from the Maritime Blog';
+    // For images and videos, share the current page URL (includes post hash if navigated)
+    // This brings users to the blog post rather than downloading the file directly
+    const mediaDescription = currentMedia.caption || currentMedia.alt || 'From the Maritime Blog';
     return {
-      url: currentMedia.src,
+      url: currentUrl,
       title: mediaDescription,
       text: mediaDescription,
     };
@@ -111,7 +115,21 @@ export default function Lightbox({
     }
   }, [shareData]);
 
-  const openLightbox = useCallback(() => {
+  const openLightbox = useCallback((e?: React.MouseEvent) => {
+    // Prevent click from reaching the video element
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    // Pause any video in the trigger area before opening lightbox
+    if (triggerRef.current) {
+      const video = triggerRef.current.querySelector('video');
+      if (video) {
+        video.pause();
+      }
+    }
+
     setActiveIndex(currentIndex);
     setIsOpen(true);
   }, [currentIndex]);
@@ -119,19 +137,30 @@ export default function Lightbox({
   const closeLightbox = useCallback(() => {
     setIsOpen(false);
     setTouchDelta({ x: 0, y: 0 });
+    setIsVideoPlaying(false);
   }, []);
 
   const goToPrev = useCallback(() => {
     if (hasNavigation) {
       setActiveIndex((prev) => (prev > 0 ? prev - 1 : allMedia.length - 1));
+      setIsVideoPlaying(false);
     }
   }, [hasNavigation, allMedia.length]);
 
   const goToNext = useCallback(() => {
     if (hasNavigation) {
       setActiveIndex((prev) => (prev < allMedia.length - 1 ? prev + 1 : 0));
+      setIsVideoPlaying(false);
     }
   }, [hasNavigation, allMedia.length]);
+
+  // Play video and hide overlay
+  const playVideo = useCallback(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsVideoPlaying(true);
+    }
+  }, []);
 
   // Keyboard navigation
   useEffect(() => {
@@ -215,7 +244,7 @@ export default function Lightbox({
 
   return (
     <>
-      <div onClick={openLightbox} className="cursor-zoom-in">
+      <div ref={triggerRef} onClick={openLightbox} className="cursor-zoom-in">
         {children}
       </div>
 
@@ -346,17 +375,35 @@ export default function Lightbox({
                   <div className="w-16 h-0.5 bg-white/20 mt-8" />
                 </div>
               ) : currentMedia.type === 'video' ? (
-                <div className="flex items-center justify-center w-[90vw] h-[70vh] md:w-[80vw] md:h-[80vh]">
+                <div className="relative flex items-center justify-center w-[90vw] h-[70vh] md:w-[80vw] md:h-[80vh]">
                   <video
+                    ref={videoRef}
                     key={currentMedia.src}
                     src={currentMedia.src}
                     poster={currentMedia.poster}
                     controls
                     preload="metadata"
-                    className="max-w-full max-h-full object-contain"
+                    className="w-full h-full object-contain"
+                    onPlay={() => setIsVideoPlaying(true)}
+                    onPause={() => setIsVideoPlaying(false)}
+                    onEnded={() => setIsVideoPlaying(false)}
                   >
                     Your browser does not support the video tag.
                   </video>
+                  {/* Large play button overlay */}
+                  {!isVideoPlaying && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); playVideo(); }}
+                      className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors cursor-pointer"
+                      aria-label="Play video"
+                    >
+                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/90 hover:bg-white flex items-center justify-center shadow-lg transition-transform hover:scale-105">
+                        <svg className="w-10 h-10 md:w-12 md:h-12 text-stone-800 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </button>
+                  )}
                 </div>
               ) : currentMedia.type === 'map' ? (
                 <div className="w-[90vw] h-[70vh] md:w-[80vw] md:h-[80vh] bg-stone-800 rounded-lg flex items-center justify-center">
