@@ -148,7 +148,7 @@ export default function Navigation({ posts }: NavigationProps) {
             }`}
             style={{ fontFamily: 'var(--font-display), Georgia, serif' }}
           >
-            Maritime Biking
+            Maritime & Beyond
           </button>
 
           {/* Menu Toggle */}

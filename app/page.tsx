@@ -384,7 +384,7 @@ export default async function Home() {
 
       {/* Hero Section */}
       <Hero
-        title="Maritime Biking"
+        title="Maritime & Beyond"
         subtitle="A 900-mile bicycle journey through Nova Scotia and Newfoundland, chasing ferries, foraging berries, and discovering the warmth of Canada's eastern shores."
         dateRange="August 1 — September 13, 2008"
         backgroundImage={heroImage}
@@ -396,7 +396,7 @@ export default async function Home() {
           <p className="text-xl md:text-2xl leading-relaxed text-stone-700 mb-8">
             In the summer of 2008, three friends set out from Connecticut in a
             1983 Mercedes wagon running on vegetable oil. Their mission: bike
-            through the Maritime provinces of Canada, from Cape Breton Island
+            through Atlantic Canada, from Cape Breton Island
             through Newfoundland and back. This is their story.
           </p>
           <div className="flex gap-8 text-sm text-stone-500 border-t border-stone-200 pt-8">

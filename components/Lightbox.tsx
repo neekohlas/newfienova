@@ -66,13 +66,13 @@ export default function Lightbox({
       return {
         url: `${baseUrl}#post-${currentMedia.postId}`,
         title: currentMedia.postTitle || 'Blog Entry',
-        text: `${currentMedia.postTitle} - from the Maritime Blog`,
+        text: `${currentMedia.postTitle} - from the Maritime & Beyond`,
       };
     }
 
     // For images and videos, share the current page URL (includes post hash if navigated)
     // This brings users to the blog post rather than downloading the file directly
-    const mediaDescription = currentMedia.caption || currentMedia.alt || 'From the Maritime Blog';
+    const mediaDescription = currentMedia.caption || currentMedia.alt || 'From the Maritime & Beyond';
     return {
       url: currentUrl,
       title: mediaDescription,

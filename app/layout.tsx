@@ -18,20 +18,20 @@ const sourceSerif = Source_Serif_4({
 const siteUrl = 'https://neekohlas.github.io/newfienova';
 
 export const metadata: Metadata = {
-  title: "Maritime Biking | A Nova Scotia & Newfoundland Journey",
+  title: "Maritime & Beyond | A Nova Scotia & Newfoundland Journey",
   description: "A 900-mile bicycle journey through Nova Scotia and Newfoundland in the summer of 2008.",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Maritime Biking | A Nova Scotia & Newfoundland Journey",
+    title: "Maritime & Beyond | A Nova Scotia & Newfoundland Journey",
     description: "A 900-mile bicycle journey through Nova Scotia and Newfoundland. Three friends, a veggie-oil Mercedes, and the summer of 2008.",
     url: siteUrl,
-    siteName: "Maritime Biking",
+    siteName: "Maritime & Beyond",
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Maritime Biking - Nova Scotia & Newfoundland bicycle journey',
+        alt: 'Maritime & Beyond - Nova Scotia & Newfoundland bicycle journey',
       },
     ],
     locale: 'en_US',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Maritime Biking | A Nova Scotia & Newfoundland Journey",
+    title: "Maritime & Beyond | A Nova Scotia & Newfoundland Journey",
     description: "A 900-mile bicycle journey through Nova Scotia and Newfoundland. Three friends, a veggie-oil Mercedes, and the summer of 2008.",
     images: ['/og-image.jpg'],
   },
