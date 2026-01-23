@@ -347,8 +347,8 @@ Some Acadians eventually returned, settling in areas the British considered marg
 };
 
 // Find a good hero image from the geotagged photos
-// Using first image from "Scenery" post for better text readability
-const heroImage = '/geotagged2/Nova_Newfie%20-%2099.jpeg';
+// Using optimized gallery version for faster loading
+const heroImage = '/images-gallery/geotagged2/Nova_Newfie - 99.jpg';
 
 export default async function Home() {
   const postsData = await getPostsData();

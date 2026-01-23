@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     siteName: "Maritime Biking",
     images: [
       {
-        url: '/geotagged2/Nova_Newfie%20-%2099.jpeg',
-        width: 1200,
-        height: 630,
+        url: '/images-gallery/geotagged2/Nova_Newfie - 99.jpg',
+        width: 1400,
+        height: 1050,
         alt: 'Maritime Biking - Nova Scotia & Newfoundland bicycle journey',
       },
     ],
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Maritime Biking | Nova Scotia & Newfoundland 2008",
     description: "A 900-mile bicycle journey through Nova Scotia and Newfoundland in the summer of 2008.",
-    images: ['/geotagged2/Nova_Newfie%20-%2099.jpeg'],
+    images: ['/images-gallery/geotagged2/Nova_Newfie - 99.jpg'],
   },
 };
 
